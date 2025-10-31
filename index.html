@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
     <!-- Memuat html2canvas untuk fitur unduh hasil -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
@@ -289,568 +289,544 @@
         // 'epilog' DIHAPUS
     };
 
-    // --- BANK SOAL (DIPERBARUI JADI 14 SOAL) ---
+    // --- BANK SOAL (DIPERBARUI JADI 50 SOAL HOTS BARU) ---
     const quizData = [
-        // PROLOG & BAB I (DIHAPUS)
-        
-        // BAB II & III (ISLAMIYAH)
+        // --- BLOK 1: HIJRAH & MASYARAKAT BARU (BABAK 2) ---
         {
-            question: "Langkah strategis 'Mu'akhah' (mempersaudarakan) yang dilakukan Nabi Saw. di Madinah bertujuan utama untuk....",
+            question: "Peristiwa Hijrah ke Yatsrib (Madinah) bukan sekadar migrasi fisik, melainkan sebuah langkah strategis yang bertujuan utama untuk....",
             options: [
-                "A. Membangun Ukhuwah Insaniyah dengan kaum Yahudi.",
-                "B. Mempersiapkan pasukan perang untuk melawan Mekkah.",
-                "C. Mengganti ikatan darah (kesukuan) dengan ikatan iman (aqidah) antara Muhajirin dan Anshar.",
-                "D. Mendistribusikan kekayaan kaum Anshar secara merata kepada semua penduduk Madinah.",
-                "E. Membentuk dewan legislatif pertama di Madinah."
-            ],
-            correct: 2
-        },
-        {
-            question: "Perbedaan fundamental antara kaum Muhajirin dan Anshar dalam konteks Ukhuwah Islamiyah adalah....",
-            options: [
-                "A. Muhajirin adalah pedagang, Anshar adalah petani.",
-                "B. Muhajirin adalah pendatang dari Mekkah, Anshar adalah penduduk asli Madinah yang memberi pertolongan.",
-                "C. Muhajirin berasal dari suku Quraisy, Anshar berasal dari suku Aus dan Khazraj.",
-                "D. Muhajirin adalah kelompok yang berperang, Anshar adalah kelompok yang berdoa.",
-                "E. Muhajirin kaya raya, Anshar miskin."
+                "A. mencari tempat yang lebih sejuk iklimnya daripada Mekkah.",
+                "B. membangun 'Ummah' atau komunitas politik-sosial yang merdeka dan berdaulat.",
+                "C. mendirikan pusat perdagangan baru untuk menyaingi kaum Quraisy.",
+                "D. melarikan diri sementara waktu sampai kondisi Mekkah aman kembali.",
+                "E. membuktikan kekuatan fisik kaum Muslimin dengan berjalan kaki jarak jauh."
             ],
             correct: 1
         },
         {
-            question: "Contoh nyata penerapan Ukhuwah Islamiyah di Madinah adalah kesediaan kaum Anshar untuk....",
+            question: "Kondisi sosial-politik paling kritis di Yatsrib yang berhasil diselesaikan oleh Nabi Saw. melalui dakwahnya adalah....",
             options: [
-                "A. Menyerahkan kepemimpinan politik Madinah sepenuhnya kepada Muhajirin.",
-                "B. Membagi dua harta mereka untuk saudara Muhajirin yang dipersaudarakan dengannya.",
-                "C. Mengubah keyakinan mereka agar sama persis dengan keyakinan Muhajirin.",
-                "D. Membayar upeti tahunan kepada Nabi Muhammad Saw.",
-                "E. Mengusir kaum Yahudi dari Madinah demi kaum Muhajirin."
+                "A. kemiskinan ekstrem akibat kegagalan panen kurma.",
+                "B. perang saudara antar-suku yang berlangsung ratusan tahun, terutama antara Aus dan Khazraj.",
+                "C. dominasi ekonomi penuh oleh Imperium Romawi dan Persia.",
+                "D. wabah penyakit menular yang membunuh separuh populasi.",
+                "E. pemberontakan kaum petani terhadap para pemilik lahan."
             ],
             correct: 1
-        },
-        // BAB IV (INSANIYAH)
-        {
-            question: "Pilar Ukhuwah Insaniyah (Kemanusiaan) yang diterapkan Nabi Saw. di Madinah paling jelas terlihat dalam....",
-            options: [
-                "A. Pembangunan Masjid Nabawi sebagai pusat ibadah.",
-                "B. Perang Badar melawan kaum kafir Quraisy Mekkah.",
-                "C. Penerbitan Piagam Madinah yang menjamin kebebasan beragama bagi non-Muslim.",
-                "D. Persaudaraan eksklusif antara Muhajirin dan Anshar.",
-                "E. Pemberian sedekah wajib (zakat) kepada fakir miskin."
-            ],
-            correct: 2
-        },
-        {
-            question: "Piagam Madinah dianggap revolusioner pada zamannya karena....",
-            options: [
-                "A. Ini adalah piagam yang menghapuskan semua agama selain Islam.",
-                "B. Ini adalah konstitusi pertama yang menyatukan semua suku Arab di bawah satu raja.",
-                "C. Ini adalah perjanjian militer untuk menyerang Imperium Romawi.",
-                "D. Ini adalah dokumen hukum yang mengakui pluralisme dan menjamin hak-hak sipil bagi komunitas non-Muslim.",
-                "E. Ini adalah kitab undang-undang ekonomi yang mengatur pasar."
-            ],
-            correct: 3
-        },
-        {
-            question: "Substansi Ukhuwah Insaniyah/Basyariyah adalah pengakuan bahwa....",
-            options: [
-                "A. Semua manusia bersaudara karena berasal dari satu iman yang sama.",
-                "B. Semua manusia bersaudara karena berasal dari satu nenek moyang yang sama (Adam).",
-                "C. Persaudaraan hanya berlaku bagi mereka yang tinggal di Madinah.",
-                "D. Non-Muslim adalah saudara jika mereka membayar pajak (jizyah).",
-                "E. Persaudaraan hanya berlaku bagi mereka yang memiliki ikatan darah."
-            ],
-            correct: 1
-        },
-        {
-            question: "Dalam Piagam Madinah, frasa 'Bagi kaum Muslimin agama mereka, dan bagi kaum Yahudi agama mereka' menunjukkan prinsip....",
-            options: [
-                "A. Asimilasi budaya, di mana semua harus menjadi satu.",
-                "B. Segregasi total, di mana kedua kaum tidak boleh berinteraksi.",
-                "C. Toleransi dan jaminan kebebasan berkeyakinan.",
-                "D. Dominasi politik kaum Muslim atas kaum Yahudi.",
-                "E. Sinkretisme agama, mencampurkan ajaran Islam dan Yahudi."
-            ],
-            correct: 2
-        },
-        // BAB V (WATHANIYAH)
-        {
-            question: "Konsep 'Ukhuwah Wathaniyah' (Persaudaraan Kebangsaan) dalam konteks Piagam Madinah merujuk pada....",
-            options: [
-                "A. Kewajiban semua suku Arab untuk bersatu melawan non-Arab.",
-                "B. Kesepakatan semua penduduk Madinah (Muslim & non-Muslim) sebagai satu 'Ummah' (bangsa) yang sama-sama membela tanah air.",
-                "C. Larangan bagi penduduk Madinah untuk bepergian ke luar negeri.",
-                "D. Persaudaraan khusus antara suku Aus dan Khazraj.",
-                "E. Kewajiban non-Muslim untuk mengikuti ajaran Islam demi persatuan."
-            ],
-            correct: 1
-        },
-        {
-            question: "Implikasi dari Ukhuwah Wathaniyah di Madinah adalah bahwa loyalitas tertinggi warga adalah kepada....",
-            options: [
-                "A. Kepala suku (Kabilah) masing-masing.",
-                "B. Kesepakatan bersama (konstitusi Piagam Madinah) dan keamanan tanah air (Wathan).",
-                "C. Aliansi dagang dengan Mekkah.",
-                "D. Kekuatan militer yang paling dominan.",
-                "E. Tradisi dan adat istiadat nenek moyang (Jahiliyah)."
-            ],
-            correct: 1
-        },
-        {
-            question: "Perbedaan utama antara Ukhuwah Islamiyah dan Ukhuwah Wathaniyah di Madinah adalah....",
-            options: [
-                "A. Islamiyah berbasis ikatan iman (internal Muslim), Wathaniyah berbasis ikatan kewarganegaraan (Muslim & non-Muslim).",
-                "B. Islamiyah adalah urusan sosial, Wathaniyah adalah urusan ekonomi.",
-                "C. Islamiyah hanya untuk Muhajirin, Wathaniyah hanya untuk Anshar.",
-                "D. Islamiyah bersifat temporer, Wathaniyah bersifat permanen.",
-                "E. Tidak ada perbedaan, keduanya adalah konsep yang sama."
-            ],
-            correct: 0
-        },
-        // BAB VI (FATHU MAKKAH) (DIHAPUS)
-        // EPILOG (HAJI WADA') (DIHAPUS)
-        
-        // KESELURUHAN (HOTS)
-        {
-            question: "Menganalisis ketiga pilar ukhuwah, urutan prioritas yang logis dalam pembangunannya di Madinah adalah....",
-            options: [
-                "A. Wathaniyah (bangsa), lalu Insaniyah (kemanusiaan), lalu Islamiyah (iman).",
-                "B. Islamiyah (memperkuat internal), lalu Insaniyah (perjanjian dengan non-Muslim), lalu Wathaniyah (membentuk negara-bangsa).",
-                "C. Insaniyah (kemanusiaan), lalu Wathaniyah (bangsa), lalu Islamiyah (iman).",
-                "D. Ketiganya dibangun secara bersamaan tanpa urutan karena sama pentingnya.",
-                "E. Wathaniyah (bangsa) adalah satu-satunya yang penting, yang lain hanya pelengkap."
-            ],
-            correct: 1
-        },
-        {
-            question: "Piagam Madinah adalah dokumen yang meletakkan dasar bagi Ukhuwah Insaniyah dan Ukhuwah Wathaniyah secara bersamaan. Ini karena piagam tersebut....",
-            options: [
-                "A. Memaksa non-Muslim masuk Islam demi persatuan bangsa.",
-                "B. Mengakui hak individu non-Muslim (Insaniyah) sekaligus mengikat mereka dalam satu komunitas politik (Wathaniyah).",
-                "C. Hanya mengatur hubungan antar suku-suku Muslim.",
-                "D. Menghapuskan semua identitas suku dan agama.",
-                "E. Merupakan perjanjian dagang murni antara Madinah dan Mekkah."
-            ],
-            correct: 1
-        },
-        {
-            question: "Yang BUKAN merupakan substansi dakwah Nabi Saw. untuk membangun masyarakat yang ber-ukhuwah adalah....",
-            options: [
-                "A. Menanamkan Tauhid untuk kesetaraan.",
-                "B. Menghapus 'Ashabiyah' (fanatisme kesukuan).",
-                "C. Menjamin kebebasan beragama bagi komunitas lain.",
-                "D. Membangun loyalitas kebangsaan (tanah air) bersama.",
-                "E. Mempertahankan superioritas suku Quraisy sebagai pemimpin."
-            ],
-            correct: 4
-        },
-        {
-            question: "Bagaimana dakwah Nabi Saw. mendamaikan potensi konflik antara Ukhuwah Islamiyah (loyalitas agama) dan Ukhuwah Wathaniyah (loyalitas negara)?",
-            options: [
-                "A. Dengan menyatakan bahwa Ukhuwah Islamiyah tidak penting.",
-                "B. Dengan mewajibkan non-Muslim berperang di garis depan.",
-                "C. Dengan memisahkan total urusan agama dan negara (sekularisme).",
-                "D. Dengan menjadikan Piagam Madinah sebagai kontrak sosial yang mengikat semua warga (Muslim/non-Muslim) untuk membela negara, sementara urusan internal agama tetap dihormati.",
-                "E. Dengan menyatakan bahwa Ukhuwah Wathaniyah hanya berlaku jika negara tersebut dipimpin oleh seorang Muslim."
-            ],
-            correct: 3
-        }
-        // --- PENAMBAHAN 36 SOAL BARU (TOTAL 50) ---
-        ,
-        {
-            question: "Apa arti harfiah dari 'Muhajirin' dalam konteks Ukhuwah Islamiyah?",
-            options: [
-                "A. Kaum Penolong",
-                "B. Kaum Pendatang/Imigran",
-                "C. Kaum Petani",
-                "D. Kaum Beriman",
-                "E. Kaum Bangsawan"
-            ],
-            correct: 1
-        },
-        {
-            question: "Apa arti harfiah dari 'Anshar' dalam konteks Ukhuwah Islamiyah?",
-            options: [
-                "A. Kaum Penolong",
-                "B. Kaum Pendatang/Imigran",
-                "C. Kaum Pedagang",
-                "D. Kaum yang Disucikan",
-                "E. Kaum yang Bertani"
-            ],
-            correct: 0
-        },
-        {
-            question: "Siapa dua sahabat yang dipersaudarakan oleh Nabi Saw. sebagai contoh Mu'akhah yang terkenal, di mana kaum Anshar menawarkan setengah hartanya?",
-            options: [
-                "A. Abu Bakar dan Umar bin Khattab",
-                "B. Utsman bin Affan dan Ali bin Abi Thalib",
-                "C. Sa'ad bin Rabi' (Anshar) dan Abdurrahman bin Auf (Muhajirin)",
-                "D. Bilal bin Rabah dan Salman Al-Farisi",
-                "E. Abu Dzar Al-Ghifari dan Abu Hurairah"
-            ],
-            correct: 2
-        },
-        {
-            question: "Apa dampak ekonomi utama dari penerapan Ukhuwah Islamiyah (Mu'akhah) di Madinah?",
-            options: [
-                "A. Menciptakan sistem kasta baru antara Muhajirin dan Anshar.",
-                "B. Memberikan jaring pengaman sosial dan ekonomi bagi kaum Muhajirin yang baru tiba tanpa harta.",
-                "C. Memonopoli pasar Madinah oleh kaum Muhajirin.",
-                "D. Menghapuskan seluruh hutang penduduk Madinah.",
-                "E. Mewajibkan semua penduduk membayar pajak kepada Nabi Saw."
-            ],
-            correct: 1
-        },
-        {
-            question: "Sistem sosial apa yang ingin digantikan oleh Nabi Saw. melalui konsep Ukhuwah Islamiyah?",
-            options: [
-                "A. Sistem Monarki Absolut",
-                "B. Sistem Feodalisme",
-                "C. 'Ashabiyah (Fanatisme kesukuan dan ikatan darah)",
-                "D. Demokrasi Liberal",
-                "E. Sistem kasta berdasarkan kekayaan"
-            ],
-            correct: 2
-        },
-        {
-            question: "Nama kota Madinah sebelum Hijrah Nabi Saw. adalah....",
-            options: [
-                "A. Mekkah Al-Mukarramah",
-                "B. Yatsrib",
-                "C. Konstantinopel",
-                "D. Syam",
-                "E. Habasyah"
-            ],
-            correct: 1
-        },
-        {
-            question: "Dua suku besar di Yatsrib yang terus-menerus berperang sebelum kedatangan Islam adalah....",
-            options: [
-                "A. Quraisy dan Tsaqif",
-                "B. Bani Qaynuqa dan Bani Nadhir",
-                "C. Aus dan Khazraj",
-                "D. Ghassan dan Kindah",
-                "E. Muhajirin dan Anshar"
-            ],
-            correct: 2
-        },
-        {
-            question: "Ukhuwah Islamiyah (Mu'akhah) berhasil menyatukan suku Aus dan Khazraj di bawah panji....",
-            options: [
-                "A. Kaum Muhajirin",
-                "B. Kaum Anshar",
-                "C. Kaum Quraisy",
-                "D. Kepemimpinan Nabi Muhammad Saw.",
-                "E. Bangsa Arab"
-            ],
-            correct: 1
-        },
-        {
-            question: "Piagam Madinah juga dikenal dengan sebutan 'Shahifah Madinah', yang artinya....",
-            options: [
-                "A. Perjanjian Damai Madinah",
-                "B. Kitab Undang-Undang Madinah",
-                "C. Deklarasi Perang Madinah",
-                "D. Lembaran (Konstitusi) Madinah",
-                "E. Sejarah Tulis Madinah"
-            ],
-            correct: 3
-        },
-        {
-            question: "Siapa yang menjadi 'Kepala Negara' atau 'Arbiter Utama' berdasarkan kesepakatan dalam Piagam Madinah?",
-            options: [
-                "A. Pemimpin suku Aus",
-                "B. Pemimpin suku Khazraj",
-                "C. Pemimpin komunitas Yahudi",
-                "D. Nabi Muhammad Saw.",
-                "E. Dewan tetua yang dipilih secara acak"
-            ],
-            correct: 3
-        },
-        {
-            question: "Apa jaminan utama yang diberikan Piagam Madinah kepada komunitas non-Muslim (seperti Yahudi) yang BUKAN bagian dari Ukhuwah Insaniyah?",
-            options: [
-                "A. Jaminan kebebasan beragama dan menjalankan ibadah.",
-                "B. Jaminan perlindungan jiwa dan harta benda.",
-                "C. Jaminan persamaan hukum di depan konstitusi.",
-                "D. Jaminan hak untuk memimpin negara Madinah secara bergantian.",
-                "E. Jaminan kebebasan dari kewajiban membela negara."
-            ],
-            correct: 3
-        },
-        {
-            question: "Dalam Ukhuwah Wathaniyah, apa kewajiban bersama yang mengikat Muslim dan non-Muslim Madinah?",
-            options: [
-                "A. Membayar zakat kepada Nabi Muhammad Saw.",
-                "B. Mengikuti ibadah shalat Jumat di Masjid Nabawi.",
-                "C. Bekerja sama mempertahankan Madinah dari serangan musuh luar.",
-                "D. Menyerang kota Mekkah secara bersama-sama.",
-                "E. Mempelajari Al-Qur'an dan Hadits."
-            ],
-            correct: 2
-        },
-        {
-            question: "Istilah 'Ummah Wahidah' (Satu Bangsa) dalam Piagam Madinah merujuk kepada....",
-            options: [
-                "A. Hanya kaum Muhajirin dan Anshar.",
-                "B. Hanya seluruh suku-suku Arab.",
-                "C. Hanya komunitas Muslim.",
-                "D. Seluruh penduduk Madinah (Muslim & non-Muslim) sebagai satu entitas politik.",
-                "E. Seluruh umat Islam di dunia."
-            ],
-            correct: 3
-        },
-        {
-            question: "Konsep Ukhuwah Wathaniyah di Madinah merupakan bentuk awal dari....",
-            options: [
-                "A. Patriotisme dan Nasionalisme (cinta tanah air)",
-                "B. Globalisasi",
-                "C. Sekularisme",
-                "D. Imperialisme",
-                "E. Anarkisme"
-            ],
-            correct: 0
-        },
-        {
-            question: "Jika seorang Yahudi warga Madinah berselisih dengan seorang Muslim, penyelesaiannya menurut Piagam Madinah adalah....",
-            options: [
-                "A. Diserahkan kepada hukum adat suku masing-masing.",
-                "B. Diadili oleh dewan pendeta Yahudi.",
-                "C. Diadili oleh hukum Islam (syariah).",
-                "D. Diserahkan kepada Nabi Muhammad Saw. sebagai arbiter tertinggi.",
-                "E. Perang antar suku."
-            ],
-            correct: 3
-        },
-        {
-            question: "Pilar ukhuwah manakah yang berfokus pada hubungan *internal* umat Islam?",
-            options: [
-                "A. Ukhuwah Islamiyah",
-                "B. Ukhuwah Insaniyah",
-                "C. Ukhuwah Wathaniyah",
-                "D. Ukhuwah Basyariyah",
-                "E. Ukhuwah Quraisy"
-            ],
-            correct: 0
-        },
-        {
-            question: "Pilar ukhuwah manakah yang berfokus pada hubungan *antar-umat beragama* dalam konteks kemanusiaan?",
-            options: [
-                "A. Ukhuwah Islamiyah",
-                "B. Ukhuwah Insaniyah / Basyariyah",
-                "C. Ukhuwah Wathaniyah",
-                "D. Ukhuwah Anshariyah",
-                "E. Ukhuwah Muhajirin"
-            ],
-            correct: 1
-        },
-        {
-            question: "Pilar ukhuwah manakah yang berfokus pada loyalitas bersama kepada *tanah air* (negara)?",
-            options: [
-                "A. Ukhuwah Islamiyah",
-                "B. Ukhuwah Insaniyah",
-                "C. Ukhuwah Wathaniyah",
-                "D. Ukhuwah Arabiyah",
-                "E. Ukhuwah Basyariyah"
-            ],
-            correct: 2
-        },
-        {
-            question: "Seorang warga Yahudi di Madinah terikat oleh pilar ukhuwah yang mana saja?",
-            options: [
-                "A. Hanya Ukhuwah Islamiyah",
-                "B. Hanya Ukhuwah Insaniyah",
-                "C. Hanya Ukhuwah Wathaniyah",
-                "D. Ukhuwah Islamiyah dan Insaniyah",
-                "E. Ukhuwah Insaniyah dan Wathaniyah"
-            ],
-            correct: 4
-        },
-        {
-            question: "Seorang warga Muslim (Muhajirin) di Madinah terikat oleh pilar ukhuwah yang mana saja?",
-            options: [
-                "A. Hanya Ukhuwah Islamiyah",
-                "B. Ukhuwah Insaniyah dan Wathaniyah",
-                "C. Ukhuwah Islamiyah, Insaniyah, dan Wathaniyah",
-                "D. Hanya Ukhuwah Wathaniyah",
-                "E. Hanya Ukhuwah Insaniyah"
-            ],
-            correct: 2
         },
         {
             question: "Hijrah dijadikan sebagai awal Kalender Islam (Tahun Hijriyah) karena peristiwa ini menandai....",
             options: [
-                "A. Kemenangan perang pertama umat Islam.",
-                "B. Turunnya wahyu Al-Qur'an yang pertama.",
-                "C. Kelahiran Nabi Muhammad Saw.",
-                "D. Wafatnya Nabi Muhammad Saw.",
-                "E. Transformasi dari komunitas berbasis iman menjadi komunitas berdaulat (Ummah/Negara)."
+                "A. kemenangan militer pertama umat Islam dalam Perang Badar.",
+                "B. turunnya wahyu Al-Qur'an yang pertama di Gua Hira.",
+                "C. kelahiran Nabi Muhammad Saw. di Mekkah.",
+                "D. transformasi dakwah dari fase pembinaan iman individu ke fase pembentukan masyarakat berdaulat.",
+                "E. selesainya pembangunan Masjid Nabawi sebagai pusat ibadah."
             ],
-            correct: 4
+            correct: 3
         },
         {
-            question: "Apa arti dari 'Ashabiyah' yang ingin dihapuskan oleh Nabi Saw.?",
+            question: "Tantangan terbesar yang dihadapi Nabi Saw. saat tiba di Madinah adalah menyatukan masyarakat majemuk yang terdiri dari....",
             options: [
-                "A. Fanatisme buta terhadap suku, klan, atau ikatan darah.",
-                "B. Semangat untuk mencari ilmu pengetahuan.",
-                "C. Kepercayaan terhadap banyak dewa (politeisme).",
-                "D. Sistem perdagangan yang adil.",
-                "E. Cinta terhadap tanah air (patriotisme)."
+                "A. pedagang Quraisy, petani Badui, dan pendeta Nasrani.",
+                "B. Muhajirin (Muslim Mekkah), Anshar (Muslim Madinah), dan berbagai suku Yahudi (non-Muslim).",
+                "C. bangsawan, kelas pekerja, dan budak tanpa ada ikatan suku.",
+                "D. pengikut Nabi Isa, pengikut Nabi Musa, dan pengikut ajaran Majusi.",
+                "E. dua kubu politik yang sama-sama beragama Islam namun berbeda pandangan."
+            ],
+            correct: 1
+        },
+        {
+            question: "Nama 'Yatsrib' diubah menjadi 'Madinah' (Madinatun-Nabi) yang berarti 'Kota Nabi', menyiratkan makna....",
+            options: [
+                "A. kota tersebut sekarang tertutup bagi siapa pun selain pengikut Nabi.",
+                "B. kota tersebut menjadi pusat peradaban baru yang tercerahkan di bawah kepemimpinan Nabi.",
+                "C. kota tersebut secara eksklusif dimiliki oleh keluarga Nabi.",
+                "D. kota tersebut berganti nama untuk menghapus jejak kekalahan perang suku Aus.",
+                "E. kota tersebut menjadi tempat peristirahatan terakhir Nabi."
+            ],
+            correct: 1
+        },
+        {
+            question: "Tiga pilar persaudaraan yang diletakkan Nabi Saw. sebagai fondasi masyarakat baru Madinah secara berurutan adalah....",
+            options: [
+                "A. Ukhuwah Insaniyah (HAM), Wathaniyah (negara), lalu Islamiyah (iman).",
+                "B. Ukhuwah Islamiyah (memperkuat internal), lalu Insaniyah (pluralisme), dan Wathaniyah (kebangsaan).",
+                "C. Ukhuwah Wathaniyah (bela negara), Islamiyah (ibadah), lalu Insaniyah (sosial).",
+                "D. Ukhuwah Insaniyah (global), Islamiyah (regional), lalu Wathaniyah (lokal).",
+                "E. Ketiganya dibangun serentak tanpa prioritas karena sama pentingnya."
+            ],
+            correct: 1
+        },
+        {
+            question: "Tindakan pertama yang dilakukan Nabi Saw. setibanya di Madinah yang berfungsi sebagai sentral ibadah, sosial, pendidikan, dan pemerintahan adalah....",
+            options: [
+                "A. membangun pasar untuk stabilitas ekonomi.",
+                "B. membangun Masjid Nabawi.",
+                "C. menulis Piagam Madinah untuk menjamin hak Yahudi.",
+                "D. mempersaudarakan Muhajirin dan Anshar.",
+                "E. membangun benteng pertahanan di sekeliling kota."
+            ],
+            correct: 1
+        },
+
+        // --- BLOK 2: UKHUWAH ISLAMIYAH (PILAR I) ---
+        {
+            question: "Langkah strategis 'Mu'akhah' (mempersaudarakan) yang dilakukan Nabi Saw. bertujuan utama untuk....",
+            options: [
+                "A. menciptakan sistem kasta baru di mana Muhajirin lebih tinggi dari Anshar.",
+                "B. menggantikan ikatan 'Ashabiyah (fanatisme darah/kesukuan) dengan ikatan Aqidah (iman) sebagai fondasi sosial.",
+                "C. memastikan kaum Anshar menyerahkan seluruh hartanya kepada Nabi Saw.",
+                "D. membentuk unit-unit militer kecil yang siap berperang.",
+                "E. memisahkan tempat tinggal antara kaum Muhajirin dan Anshar untuk menghindari konflik."
+            ],
+            correct: 1
+        },
+        {
+            question: "Revolusi sosial yang dicapai melalui Ukhuwah Islamiyah (Mu'akhah) adalah....",
+            options: [
+                "A. keberhasilan menghapuskan kemiskinan secara total di Madinah dalam satu tahun.",
+                "B. keberhasilan menyatukan suku Aus dan Khazraj (Anshar) yang telah berperang ratusan tahun di bawah panji iman.",
+                "C. pengangkatan Abdurrahman bin Auf sebagai orang terkaya di Madinah.",
+                "D. pemaksaan kaum Muhajirin untuk menjadi petani seperti kaum Anshar.",
+                "E. pelarangan total terhadap praktik perdagangan di Madinah."
+            ],
+            correct: 1
+        },
+        {
+            question: "Sikap 'Itsar' yang ditunjukkan kaum Anshar, seperti Sa'ad bin Rabi' yang menawarkan separuh hartanya kepada Abdurrahman bin Auf, menunjukkan bahwa....",
+            options: [
+                "A. kaum Anshar memiliki harta berlebih yang tidak mereka butuhkan lagi.",
+                "B. ikatan persaudaraan seiman telah berhasil mengalahkan sifat egoisme material dan kesukuan.",
+                "C. Abdurrahman bin Auf adalah sahabat terdekat Nabi Saw. sehingga wajib diistimewakan.",
+                "D. Nabi Saw. memerintahkan penyitaan harta bagi siapa saja yang menolak Mu'akhah.",
+                "E. kaum Anshar berharap mendapatkan keuntungan bisnis dari kaum Muhajirin di masa depan."
+            ],
+            correct: 1
+        },
+        {
+            question: "Perbedaan fundamental antara kaum Muhajirin dan Anshar dalam konteks Ukhuwah Islamiyah adalah....",
+            options: [
+                "A. Muhajirin adalah pedagang, Anshar adalah petani, sehingga mereka saling melengkapi secara ekonomi.",
+                "B. Muhajirin adalah imigran dari Mekkah yang meninggalkan hartanya, Anshar adalah penduduk asli Madinah yang memberi pertolongan.",
+                "C. Muhajirin adalah kaum bangsawan Quraisy, Anshar adalah rakyat jelata dari suku Aus dan Khazraj.",
+                "D. Muhajirin adalah kelompok yang fokus pada ibadah, Anshar adalah kelompok yang fokus pada jihad.",
+                "E. Muhajirin berbahasa Arab Quraisy, Anshar berbahasa Arab Yatsrib yang berbeda total."
+            ],
+            correct: 1
+        },
+        {
+            question: "Dampak ekonomi paling signifikan dari penerapan Ukhuwah Islamiyah (Mu'akhah) di Madinah adalah....",
+            options: [
+                "A. monopoli total pasar Madinah oleh kaum Muhajirin yang lebih berpengalaman berdagang.",
+                "B. terciptanya jaring pengaman sosial dan pemerataan ekonomi awal bagi kaum Muhajirin yang tiba tanpa harta.",
+                "C. pemberlakuan pajak yang sangat tinggi bagi kaum Anshar untuk membiayai Muhajirin.",
+                "D. penghapusan seluruh hutang-piutang yang ada di Madinah.",
+                "E. pembagian lahan pertanian secara paksa dari Anshar ke Muhajirin."
+            ],
+            correct: 1
+        },
+        {
+            question: "Ukhuwah Islamiyah difokuskan sebagai pilar pertama oleh Nabi Saw. karena....",
+            options: [
+                "A. jumlah umat Islam adalah yang paling sedikit sehingga perlu dikhawatirkan.",
+                "B. kesepakatan dengan kaum Yahudi tidak mungkin tercapai tanpa kekuatan internal.",
+                "C. sebuah komunitas tidak akan bisa membangun peradaban eksternal jika fondasi internalnya (umat Islam) masih rapuh dan terpecah.",
+                "D. kaum Muhajirin menuntut hak-hak mereka segera setelah tiba di Madinah.",
+                "E. perintah wahyu secara spesifik meminta mendahulukan pembangunan masjid di atas segalanya."
+            ],
+            correct: 2
+        },
+        {
+            question: "Ikatan 'Ashabiyah' yang ingin digantikan oleh Ukhuwah Islamiyah adalah....",
+            options: [
+                "A. sistem monarki absolut di mana raja berkuasa penuh.",
+                "B. kepercayaan politeisme (menyembah banyak berhala).",
+                "C. fanatisme buta terhadap ikatan darah, suku, dan klan yang sering menjadi pemicu perang.",
+                "D. sistem kasta sosial berdasarkan kekayaan dan pekerjaan.",
+                "E. semangat cinta tanah air dan bela negara."
+            ],
+            correct: 2
+        },
+        {
+            question: "Keberhasilan 'Mu'akhah' membuktikan bahwa dakwah Nabi Saw. mampu....",
+            options: [
+                "A. mengubah total profesi seseorang dalam sekejap.",
+                "B. membangun tatanan sosial baru yang tidak lagi didasarkan pada keturunan atau klan, melainkan pada kesamaan iman dan nilai.",
+                "C. menghapuskan semua perbedaan budaya antara Mekkah dan Madinah.",
+                "D. memaksa semua orang untuk tinggal di dalam satu rumah besar.",
+                "E. menjamin bahwa tidak akan ada lagi kemiskinan di Madinah selamanya."
+            ],
+            correct: 1
+        },
+
+        // --- BLOK 3: UKHUWAH INSANIYAH (PILAR II) ---
+        {
+            question: "Instrumen hukum yang menjadi landasan formal Ukhuwah Insaniyah (Basyariyah) di Madinah adalah....",
+            options: [
+                "A. Al-Qur'an dan Hadits yang diwajibkan bagi seluruh penduduk.",
+                "B. Perjanjian Hudaibiyah yang disepakati dengan kaum Mekkah.",
+                "C. Piagam Madinah (Shahifah Madinah) yang disepakati bersama komunitas non-Muslim.",
+                "D. Keputusan sepihak Nabi Muhammad Saw. sebagai pemimpin tertinggi.",
+                "E. Kitab Taurat yang digunakan sebagai hukum bersama."
+            ],
+            correct: 2
+        },
+        {
+            question: "Substansi paling revolusioner dari Ukhuwah Insaniyah dalam Piagam Madinah adalah....",
+            options: [
+                "A. kewajiban bagi non-Muslim untuk membayar upeti yang besar kepada umat Islam.",
+                "B. pelarangan bagi kaum Yahudi untuk beribadah di tempat umum.",
+                "C. pengakuan atas eksistensi, identitas, dan jaminan kebebasan beragama penuh bagi komunitas non-Muslim.",
+                "D. perintah untuk meleburkan semua agama menjadi satu agama baru.",
+                "E. pembentukan dewan khusus yang menghakimi semua kesalahan non-Muslim."
+            ],
+            correct: 2
+        },
+        {
+            question: "Frasa 'Bagi kaum Muslimin agama mereka, dan bagi kaum Yahudi agama mereka' dalam Piagam Madinah adalah penegasan prinsip....",
+            options: [
+                "A. sinkretisme (pencampuran agama).",
+                "B. sekularisme (pemisahan total agama dan negara).",
+                "C. toleransi aktif, pluralisme, dan jaminan kebebasan berkeyakinan (HAM).",
+                "D. segregasi (pemisahan wilayah) total antara Muslim dan Yahudi.",
+                "E. superioritas hukum Islam atas hukum Taurat."
+            ],
+            correct: 2
+        },
+        {
+            question: "Piagam Madinah dianggap konstitusi tertulis pertama di dunia, bahkan lebih maju dari Magna Carta, karena....",
+            options: [
+                "A. Piagam Madinah ditulis 600 tahun *sebelum* Magna Carta dan menjamin hak seluruh warga negara, bukan hanya bangsawan.",
+                "B. Piagam Madinah ditulis di atas lembaran emas murni, sedangkan Magna Carta di kertas biasa.",
+                "C. Piagam Madinah adalah satu-satunya dokumen kuno yang masih utuh tersimpan di museum.",
+                "D. Piagam Madinah memberikan kekuasaan absolut kepada Nabi Muhammad Saw. tidak seperti Magna Carta.",
+                "E. Piagam Madinah mengatur strategi perang global, sementara Magna Carta hanya mengatur urusan lokal Inggris."
             ],
             correct: 0
         },
         {
-            question: "Bagaimana Piagam Madinah mengatur 'biaya perang' (diyat) atau uang tebusan?",
+            question: "Ukhuwah Insaniyah (Basyariyah) didasarkan pada kesadaran fundamental bahwa....",
             options: [
-                "A. Dihapuskan seluruhnya.",
-                "B. Ditanggung oleh individu yang melakukan kejahatan.",
-                "C. Ditanggung bersama oleh suku atau aliansi terkait (tidak dibebankan pada individu lemah).",
-                "D. Ditanggung oleh Nabi Muhammad Saw. pribadi.",
-                "E. Ditanggung oleh seluruh warga Madinah secara merata."
+                "A. semua manusia adalah saudara hanya jika mereka memeluk agama samawi (Islam, Kristen, Yahudi).",
+                "B. semua manusia adalah saudara dalam kemanusiaan karena berasal dari nenek moyang yang sama, yakni Adam dan Hawa.",
+                "C. persaudaraan kemanusiaan hanya berlaku di dalam wilayah kota Madinah.",
+                "D. manusia hanya bersaudara jika mereka terikat dalam satu perjanjian politik.",
+                "E. persaudaraan kemanusiaan adalah konsep utopis yang tidak mungkin diterapkan."
+            ],
+            correct: 1
+        },
+        {
+            question: "Dalam Piagam Madinah, jika terjadi perselisihan antara seorang Muslim dan seorang Yahudi, penyelesaiannya adalah....",
+            options: [
+                "A. diserahkan kepada hukum adat suku masing-masing, yang kuat yang menang.",
+                "B. diadili oleh dewan pendeta Yahudi karena Muslim dianggap tamu.",
+                "C. diadili oleh hakim Muslim karena Islam adalah agama mayoritas.",
+                "D. diserahkan kepada Nabi Muhammad Saw. sebagai arbiter (penengah) tertinggi yang adil bagi semua pihak.",
+                "E. kedua pihak wajib membayar denda kepada kas negara tanpa proses pengadilan."
+            ],
+            correct: 3
+        },
+        {
+            question: "Piagam Madinah menetapkan keadilan sebagai hukum tertinggi, menggantikan....",
+            options: [
+                "A. hukum rimba kesukuan ('Ashabiyah) di mana loyalitas suku mengalahkan kebenaran.",
+                "B. hukum tertulis Romawi yang sudah diterapkan sebelumnya.",
+                "C. sistem demokrasi perwakilan yang dianggap terlalu lambat.",
+                "D. sistem teokrasi di mana pendeta Yahudi berkuasa penuh.",
+                "E. hukum ekonomi pasar bebas yang merugikan rakyat kecil."
+            ],
+            correct: 0
+        },
+        {
+            question: "Dalam konteks modern, Ukhuwah Insaniyah yang diterapkan Nabi Saw. paling relevan dengan....",
+            options: [
+                "A. paka pertahanan militer regional seperti NATO atau Pakta Warsawa.",
+                "B. persatuan etnis atau ras tertentu untuk melawan etnis lain.",
+                "C. deklarasi Universal Hak Asasi Manusia (HAM) PBB dan prinsip-prinsip pluralisme.",
+                "D. organisasi konferensi negara-negara Islam (OKI).",
+                "E. pembentukan satu mata uang global untuk seluruh dunia."
             ],
             correct: 2
         },
         {
-            question: "Konsep 'Dhimmi' (warga non-Muslim yang dilindungi) dalam Fiqh Islam adalah pengembangan lebih lanjut dari prinsip....",
+            question: "Perlindungan atas hak milik dan jiwa bagi semua warga (Muslim dan non-Muslim) dalam Piagam Madinah adalah esensi dari....",
             options: [
                 "A. Ukhuwah Islamiyah",
-                "B. Ukhuwah Insaniyah (Piagam Madinah)",
-                "C. Ukhuwah Muhajirin",
-                "D. 'Ashabiyah",
-                "E. Perang Badar"
+                "B. Ukhuwah Insaniyah",
+                "C. Ukhuwah Wathaniyah",
+                "D. Ukhuwah Muhajirin",
+                "E. Ukhuwah Anshar"
+            ],
+            correct: 1
+        },
+
+        // --- BLOK 4: UKHUWAH WATHANIYAH (PILAR III) ---
+        {
+            question: "Konsep 'Ummah Wahidah' (satu bangsa/komunitas) dalam Piagam Madinah memiliki makna politik....",
+            options: [
+                "A. bahwa semua penduduk Madinah wajib memeluk agama Islam secara serentak.",
+                "B. bahwa semua penduduk Madinah, terlepas dari agama dan suku, adalah satu entitas kewarganegaraan.",
+                "C. bahwa hanya suku Quraisy yang boleh memimpin 'Ummah' tersebut.",
+                "D. bahwa 'Ummah' Madinah adalah bagian dari Imperium Persia.",
+                "E. bahwa semua suku Yahudi harus meninggalkan Madinah agar 'Ummah' menjadi satu."
             ],
             correct: 1
         },
         {
-            question: "Mengapa Nabi Muhammad Saw. memilih hijrah ke Madinah (Yatsrib) daripada ke tempat lain seperti Habasyah (Ethiopia)?",
+            question: "Konsekuensi langsung dan kewajiban utama dari Ukhuwah Wathaniyah bagi seluruh warga Madinah (Muslim & non-Muslim) adalah....",
             options: [
-                "A. Karena Madinah lebih kaya secara ekonomi.",
-                "B. Karena Madinah telah menawarkan bai'at (janji setia) dan siap menjadi basis negara baru.",
-                "C. Karena Habasyah adalah negara Kristen yang memusuhi Islam.",
-                "D. Karena jarak Madinah lebih dekat ke Mekkah.",
-                "E. Karena Madinah memiliki pasukan militer terkuat."
+                "A. kewajiban membayar zakat dan infaq ke Baitul Mal.",
+                "B. kewajiban yang sama untuk berpartisipasi membela 'Wathan' (tanah air) Madinah dari serangan musuh luar.",
+                "C. kewajiban mengikuti shalat Jumat di Masjid Nabawi setiap minggu.",
+                "D. kewajiban menggunakan bahasa Arab Quraisy dalam komunikasi sehari-hari.",
+                "E. kewajiban menyerahkan semua lahan pertanian kepada negara."
             ],
             correct: 1
         },
         {
-            question: "Apa yang dimaksud dengan 'Bai'at Aqabah'?",
+            question: "Ukhuwah Wathaniyah yang dicetuskan Nabi Saw. berhasil mengubah paradigma loyalitas primer masyarakat dari....",
             options: [
-                "A. Perjanjian damai dengan kaum Quraisy Mekkah.",
-                "B. Janji setia penduduk Yatsrib (Aus & Khazraj) kepada Nabi Saw. sebelum hijrah.",
-                "C. Deklarasi perang terhadap Romawi.",
-                "D. Prosesi pernikahan Nabi Saw. dengan Aisyah.",
-                "E. Perjanjian dagang dengan kaum Yahudi."
+                "A. loyalitas kepada uang dan kekayaan menjadi loyalitas kepada pemimpin agama.",
+                "B. loyalitas kepada suku atau kabilah ('Ashabiyah) menjadi loyalitas kepada negara-bangsa (Wathan) berdasarkan kontrak sosial.",
+                "C. loyalitas kepada Imperium Romawi menjadi loyalitas kepada Imperium Persia.",
+                "D. loyalitas buta kepada Nabi Saw. menjadi loyalitas kritis kepada dewan tetua.",
+                "E. loyalitas kepada tradisi agraris menjadi loyalitas kepada tradisi maritim."
             ],
             correct: 1
         },
         {
-            question: "Tindakan pertama yang dilakukan Nabi Saw. setibanya di Madinah (selain Mu'akhah) adalah....",
+            question: "Perbedaan esensial antara Ukhuwah Insaniyah dan Ukhuwah Wathaniyah dalam Piagam Madinah adalah....",
             options: [
-                "A. Membangun pasar",
-                "B. Membangun Masjid Nabawi",
-                "C. Mencetak mata uang",
-                "D. Menulis Piagam Madinah",
-                "E. Membangun benteng pertahanan"
-            ],
-            correct: 1
-        },
-        {
-            question: "Mengapa pembangunan Masjid Nabawi sangat penting bagi masyarakat baru Madinah?",
-            options: [
-                "A. Hanya sebagai tempat shalat berjamaah.",
-                "B. Sebagai pusat ibadah, pemerintahan, pendidikan, dan sosial (sentral Ukhuwah).",
-                "C. Sebagai benteng pertahanan militer.",
-                "D. Sebagai simbol kekayaan kaum Muslimin.",
-                "E. Untuk menyaingi Ka'bah di Mekkah."
-            ],
-            correct: 1
-        },
-        {
-            question: "Dalam Ukhuwah Wathaniyah, jika ada satu suku Yahudi mengkhianati Piagam Madinah, apa konsekuensinya?",
-            options: [
-                "A. Seluruh komunitas Yahudi lainnya ikut dihukum.",
-                "B. Seluruh non-Muslim diusir dari Madinah.",
-                "C. Suku yang berkhianat akan diadili berdasarkan konstitusi, bukan suku lainnya.",
-                "D. Piagam Madinah otomatis batal seluruhnya.",
-                "E. Nabi Muhammad Saw. akan membayar denda atas nama mereka."
+                "A. Insaniyah hanya untuk Yahudi, Wathaniyah hanya untuk Muslim.",
+                "B. Insaniyah adalah konsep abstrak, Wathaniyah adalah konsep militer.",
+                "C. Insaniyah menjamin hak sipil dan kebebasan beragama, Wathaniyah menetapkan kewajiban kolektif membela tanah air.",
+                "D. Insaniyah bersifat lokal (Madinah), Wathaniyah bersifat global (seluruh dunia).",
+                "E. Insaniyah adalah urusan ekonomi, Wathaniyah adalah urusan sosial."
             ],
             correct: 2
         },
         {
-            question: "Prinsip 'Keadilan Sosial' dalam Piagam Madinah berarti....",
+            question: "Dalam konteks modern di Indonesia, Ukhuwah Wathaniyah yang dipraktikkan di Madinah paling relevan dengan....",
             options: [
-                "A. Yang kaya harus memberikan semua hartanya kepada yang miskin.",
-                "B. Hukum berlaku sama untuk semua, kuat atau lemah, Muslim atau non-Muslim.",
-                "C. Kaum Muslimin mendapat hak istimewa di pengadilan.",
-                "D. Kaum Muhajirin berhak atas tanah kaum Anshar.",
-                "E. Semua sengketa diselesaikan dengan duel."
+                "A. semangat persatuan dalam keberagaman (Bhinneka Tunggal Ika) dan komitmen kebangsaan (Pancasila) untuk membela NKRI.",
+                "B. tuntutan untuk membentuk negara berdasarkan satu agama tertentu.",
+                "C. gerakan separatisme yang didasarkan pada perbedaan etnis.",
+                "D. superioritas satu suku (misalnya Jawa) atas suku-suku lainnya.",
+                "E. sistem ekonomi pasar bebas tanpa campur tangan negara."
+            ],
+            correct: 0
+        },
+        {
+            question: "Seorang warga Yahudi di Madinah yang menandatangani Piagam Madinah, terikat oleh pilar ukhuwah....",
+            options: [
+                "A. hanya Ukhuwah Islamiyah, karena mereka tinggal bersama umat Islam.",
+                "B. hanya Ukhuwah Insaniyah, karena mereka diakui kemanusiaannya.",
+                "C. hanya Ukhuwah Wathaniyah, karena mereka wajib ikut perang.",
+                "D. Ukhuwah Islamiyah dan Insaniyah, tapi tidak Wathaniyah.",
+                "E. Ukhuwah Insaniyah (jaminan hak beragama) dan Ukhuwah Wathaniyah (kewajiban bela negara)."
+            ],
+            correct: 4
+        },
+        {
+            question: "Seorang warga Muslim Muhajirin di Madinah, terikat oleh pilar ukhuwah....",
+            options: [
+                "A. hanya Ukhuwah Islamiyah, karena ia seorang Muslim.",
+                "B. Ukhuwah Insaniyah dan Wathaniyah, tapi tidak Islamiyah.",
+                "C. Ukhuwah Islamiyah (dengan Anshar), Insaniyah (dengan Yahudi), dan Wathaniyah (sebagai warga negara Madinah).",
+                "D. hanya Ukhuwah Wathaniyah, karena ia telah menjadi warga negara baru.",
+                "E. hanya Ukhuwah Muhajirin, sebagai kelompok eksklusif."
+            ],
+            correct: 2
+        },
+        {
+            question: "Konsep 'Wathan' (tanah air) dalam Ukhuwah Wathaniyah merujuk pada....",
+            options: [
+                "A. seluruh Jazirah Arab yang harus ditaklukkan.",
+                "B. kota Mekkah sebagai pusat spiritual umat Islam.",
+                "C. wilayah teritorial Madinah yang disepakati sebagai rumah bersama yang wajib dilindungi.",
+                "D. tanah milik pribadi masing-masing suku.",
+                "E. dunia spiritual di akhirat."
+            ],
+            correct: 2
+        },
+        {
+            question: "Jika ada satu suku Yahudi mengkhianati Piagam Madinah, maka konsekuensinya menurut piagam itu adalah....",
+            options: [
+                "A. seluruh komunitas Yahudi lainnya otomatis ikut dihukum dan diusir.",
+                "B. seluruh komunitas non-Muslim kehilangan hak mereka.",
+                "C. Piagam Madinah otomatis batal dan tidak berlaku lagi untuk semua pihak.",
+                "D. suku yang berkhianat akan diadili berdasarkan konstitusi, dan suku lain tidak ikut menanggung kesalahannya.",
+                "E. kaum Muslimin wajib memaafkan pengkhianatan tersebut tanpa syarat."
+            ],
+            correct: 3
+        },
+
+        // --- BLOK 5: SINTESIS & HOTS (PERBANDINGAN) ---
+        {
+            question: "Piagam Madinah adalah dokumen jenius yang secara simultan berhasil meletakkan dasar bagi....",
+            options: [
+                "A. Ukhuwah Islamiyah (internal) dan Ukhuwah Militeriyah (ekspansi).",
+                "B. Ukhuwah Insaniyah (jaminan hak plural) dan Ukhuwah Wathaniyah (kewajiban kebangsaan).",
+                "C. Ukhuwah Insaniyah (global) dan Ukhuwah Quraisy (lokal Mekkah).",
+                "D. Ukhuwah Wathaniyah (nasional) dan Ukhuwah Kapitaliyah (ekonomi).",
+                "E. Ukhuwah Islamiyah (persaudaraan iman) dan Ukhuwah Rahbaniyah (kerahiban)."
             ],
             correct: 1
         },
         {
-            question: "Manakah dari berikut ini yang BUKAN merupakan fungsi Piagam Madinah?",
+            question: "Menganalisis ketiga pilar, dakwah Nabi Saw. menunjukkan bahwa masyarakat ideal (ummah) dibangun di atas....",
             options: [
-                "A. Menyatukan penduduk Madinah yang majemuk.",
-                "B. Menetapkan konstitusi dan hukum bersama.",
-                "C. Mengatur strategi penyerangan ke Imperium Persia.",
-                "D. Menjamin hak-hak sipil dan kebebasan beragama.",
+                "A. keseragaman (homogenitas) total dalam agama, suku, dan pandangan politik.",
+                "B. kekuatan militer yang dominan untuk menaklukkan semua perbedaan.",
+                "C. keseimbangan antara solidaritas internal (Islamiyah), penghormatan pada kemanusiaan (Insaniyah), dan komitmen pada negara (Wathaniyah).",
+                "D. pemisahan total antara urusan agama dan urusan negara (sekularisme murni).",
+                "E. superioritas ekonomi di atas segalanya, mengabaikan hak-hak sosial."
+            ],
+            correct: 2
+        },
+        {
+            question: "Yang BUKAN merupakan implikasi dari penerapan tiga pilar ukhuwah di Madinah adalah....",
+            options: [
+                "A. terciptanya stabilitas sosial di kota yang sebelumnya dilanda perang saudara.",
+                "B. terbentuknya identitas kebangsaan baru sebagai 'warga Madinah'.",
+                "C. penghapusan total identitas suku dan agama minoritas untuk dipaksa melebur (asimilasi paksa).",
+                "D. terjaminnya hak hidup dan kebebasan beribadah bagi komunitas non-Muslim.",
+                "E. terciptanya jaring pengaman ekonomi bagi imigran (Muhajirin) melalui solidaritas Anshar."
+            ],
+            correct: 2
+        },
+        {
+            question: "Cara dakwah Nabi Saw. mendamaikan potensi konflik antara Ukhuwah Islamiyah (loyalitas agama) dan Ukhuwah Wathaniyah (loyalitas negara) adalah....",
+            options: [
+                "A. dengan menyatakan bahwa Ukhuwah Wathaniyah tidak penting dan loyalitas agama adalah segalanya.",
+                "B. dengan mewajibkan non-Muslim ikut berperang di garda terdepan sebagai bukti loyalitas.",
+                "C. dengan menjadikan Piagam Madinah sebagai kontrak sosial yang mengikat semua warga (Muslim/non-Muslim) untuk bela negara, sementara urusan internal agama tetap dihormati.",
+                "D. dengan memisahkan total urusan agama dan negara sehingga keduanya tidak pernah bersinggungan.",
+                "E. dengan menyatakan bahwa Ukhuwah Wathaniyah hanya berlaku jika negara tersebut dipimpin oleh seorang Muslim Quraisy."
+            ],
+            correct: 2
+        },
+        {
+            question: "Perbedaan utama dalam cakupan antara Ukhuwah Islamiyah dan Ukhuwah Insaniyah adalah....",
+            options: [
+                "A. Islamiyah bersifat lokal (Madinah), Insaniyah bersifat regional (Jazirah Arab).",
+                "B. Islamiyah berbasis ikatan iman (internal Muslim), Insaniyah berbasis ikatan kemanusiaan (lintas iman/global).",
+                "C. Islamiyah fokus pada ekonomi, Insaniyah fokus pada politik.",
+                "D. Islamiyah hanya untuk Muhajirin, Insaniyah hanya untuk Anshar.",
+                "E. Islamiyah adalah konsep baru, Insaniyah adalah konsep lama dari zaman Jahiliyah."
+            ],
+            correct: 1
+        },
+        {
+            question: "Dari ketiga pilar tersebut, yang menjadi fondasi bagi persatuan internal umat Islam adalah....",
+            options: [
+                "A. Ukhuwah Islamiyah (Mu'akhah)",
+                "B. Ukhuwah Insaniyah (Piagam Madinah)",
+                "C. Ukhuwah Wathaniyah (Bela Negara)",
+                "D. Ukhuwah Basyariyah (Kemanusiaan)",
+                "E. Ukhuwah Aus dan Khazraj (Kesukuan)"
+            ],
+            correct: 0
+        },
+        {
+            question: "Pelajaran utama dari tiga pilar ukhuwah Nabi Saw. adalah bahwa masyarakat yang kuat, adil, dan beradab....",
+            options: [
+                "A. harus memiliki satu agama dan satu suku yang seragam (homogen).",
+                "B. harus dibangun di atas fondasi keadilan, pengakuan terhadap pluralisme, dan komitmen kebangsaan bersama.",
+                "C. harus fokus pada kekuatan militer dan ekspansi wilayah.",
+                "D. harus menutup diri dari semua pengaruh luar dan komunitas non-Muslim.",
+                "E. harus memprioritaskan pembangunan ekonomi di atas hukum dan hak asasi."
+            ],
+            correct: 1
+        },
+        {
+            question: "Prinsip keadilan sosial dalam Piagam Madinah (bagian dari Ukhuwah Insaniyah) tercermin dalam....",
+            options: [
+                "A. penetapan bahwa hukum berlaku sama untuk semua, kuat atau lemah, Muslim atau non-Muslim.",
+                "B. pemberian hak istimewa bagi suku Quraisy di pengadilan.",
+                "C. penghapusan hak milik pribadi bagi seluruh warga Madinah.",
+                "D. kewajiban bagi yang kalah perang untuk menjadi budak.",
+                "E. pembebasan pajak bagi seluruh pedagang kaya."
+            ],
+            correct: 0
+        },
+        {
+            question: "Mengapa Nabi Saw. harus membangun Ukhuwah Islamiyah terlebih dahulu sebelum menawarkan Piagam Madinah kepada suku-suku Yahudi....",
+            options: [
+                "A. Karena Nabi Saw. ingin menunjukkan bahwa umat Islam kaya raya dan mampu membayar perjanjian.",
+                "B. Karena Umat Islam harus bersatu dan solid secara internal terlebih dahulu sebelum bisa bernegosiasi dan menawarkan perlindungan kepada pihak eksternal.",
+                "C. Karena suku-suku Yahudi hanya mau berunding jika suku Aus dan Khazraj sudah dikalahkan.",
+                "D. Karena perintah wahyu melarang berinteraksi dengan non-Muslim sebelum internal kuat.",
+                "E. Karena Masjid Nabawi belum selesai dibangun sebagai tempat perundingan."
+            ],
+            correct: 1
+        },
+        {
+            question: "Manakah dari berikut ini yang BUKAN merupakan fungsi Piagam Madinah....",
+            options: [
+                "A. Menyatukan penduduk Madinah yang majemuk (Muslim & non-Muslim).",
+                "B. Menetapkan konstitusi bersama dan sumber hukum tertinggi.",
+                "C. Mengatur strategi penyerangan bersama ke Imperium Romawi dan Persia.",
+                "D. Menjamin hak-hak sipil dan kebebasan beragama bagi minoritas.",
                 "E. Membentuk aliansi pertahanan bersama (Ukhuwah Wathaniyah)."
             ],
             correct: 2
         },
         {
-            question: "Dalam konteks modern di Indonesia, Ukhuwah Wathaniyah paling relevan dengan konsep....",
+            question: "Sistem 'Diyat' (uang tebusan) yang diatur dalam Piagam Madinah menunjukkan bahwa....",
             options: [
-                "A. Bhinneka Tunggal Ika dan Pancasila",
-                "B. Syariat Islam",
-                "C. chauvinisme (nasionalisme sempit)",
-                "D. Otonomi daerah",
-                "E. Pasar bebas"
+                "A. kejahatan individu (seperti pembunuhan) harus ditanggung bersama oleh sukunya, agar tidak membebani individu yang lemah.",
+                "B. setiap kejahatan harus dibalas dengan hukuman mati tanpa kecuali.",
+                "C. individu pelaku kejahatan harus menanggung sendiri semua denda tanpa bantuan suku.",
+                "D. sistem Diyat dihapuskan seluruhnya dan diganti hukum penjara.",
+                "E. hanya suku Yahudi yang wajib membayar Diyat, sementara Muslim dibebaskan."
             ],
             correct: 0
         },
         {
-            question: "Dalam konteks modern, Ukhuwah Insaniyah paling relevan dengan....",
+            question: "Keberhasilan Nabi Saw. menerapkan tiga pilar ukhuwah ini secara fundamental telah menghancurkan struktur masyarakat....",
             options: [
-                "A. Organisasi Konferensi Islam (OKI)",
-                "B. Perserikatan Bangsa-Bangsa (PBB) dan Deklarasi HAM.",
-                "C. Pakta pertahanan militer (NATO)",
-                "D. Liga Arab",
-                "E. Persatuan ulama"
+                "A. Demokratis",
+                "B. Agraris",
+                "C. Jahiliyah yang berbasis 'Ashabiyah (fanatisme suku)",
+                "D. Monoteisme",
+                "E. Feodal (tuan tanah)"
+            ],
+            correct: 2
+        },
+        {
+            question: "Yang dimaksud 'persaudaraan kemanusiaan' (Ukhuwah Insaniyah/Basyariyah) adalah....",
+            options: [
+                "A. persaudaraan yang hanya terbatas pada interaksi dagang.",
+                "B. persaudaraan yang mengikat seluruh manusia tanpa memandang suku, agama, atau ras.",
+                "C. persaudaraan yang hanya berlaku antara suku Aus dan Khazraj.",
+                "D. persaudaraan yang hanya berlaku antara Muslim Muhajirin dan Anshar.",
+                "E. persaudaraan yang hanya mengikat suku-suku Arab."
             ],
             correct: 1
         },
         {
-            question: "Sikap kaum Anshar yang rela berbagi dengan Muhajirin menunjukkan sifat....",
+            question: "Langkah Nabi Saw. menyusun Piagam Madinah menunjukkan visi beliau sebagai....",
             options: [
-                "A. Riya' (pamer)",
-                "B. 'Itsar (mengutamakan orang lain)",
-                "C. 'Ashabiyah (fanatisme)",
-                "D. Bakhil (kikir)",
-                "E. Takabbur (sombong)"
+                "A. seorang panglima perang yang fokus pada penaklukan militer.",
+                "B. seorang pemimpin spiritual yang hanya mengurus ibadah ritual.",
+                "C. seorang negarawan visioner yang membangun negara-bangsa berdasarkan hukum dan konstitusi.",
+                "D. seorang ekonom yang hanya fokus pada stabilitas pasar.",
+                "E. seorang hakim adat yang meneruskan tradisi Jahiliyah."
             ],
-            correct: 1
+            correct: 2
         },
         {
-            question: "Pelajaran utama dari tiga pilar ukhuwah Nabi Saw. adalah bahwa masyarakat yang kuat....",
+            question: "Prinsip Ukhuwah Wathaniyah mewajibkan semua warga membela Madinah. Hal ini didasarkan pada....",
             options: [
-                "A. Harus seragam (homogen) dalam segala hal.",
-                "B. Dibangun di atas fondasi keadilan, pluralisme, dan persatuan, dimulai dari inti yang solid.",
-                "C. Harus memiliki militer terkuat di dunia.",
-                "D. Harus menutup diri dari semua pengaruh luar.",
-                "E. Hanya mementingkan urusan ibadah ritual."
+                "A. paksaan militer dari Nabi Muhammad Saw.",
+                "B. rasa cinta terhadap tanah air bersama dan kesepakatan (kontrak sosial) untuk melindunginya.",
+                "C. keinginan untuk mendapatkan rampasan perang jika berhasil menang.",
+                "D. ketakutan terhadap ancaman Imperium Romawi yang akan menyerang.",
+                "E. tradisi kuno bahwa semua suku wajib berperang setiap tahun."
             ],
             correct: 1
-        },
-        {
-            question: "Mengapa Piagam Madinah dianggap lebih maju daripada 'Magna Carta' di Inggris?",
-            options: [
-                "A. Karena Piagam Madinah ditulis di atas emas.",
-                "B. Karena Magna Carta hanya mengatur hak bangsawan dan raja, sementara Piagam Madinah menjamin hak seluruh warga negara termasuk minoritas.",
-                "C. Karena Magna Carta ditulis 600 tahun *setelah* Piagam Madinah.",
-                "D. Jawaban B dan C benar.",
-                "E. Karena Magna Carta tidak pernah diterapkan."
-            ],
-            correct: 3
         }
     ];
 
@@ -1192,8 +1168,3 @@ Skor: ${finalScore}`;
 
 </body>
 </html>
-
-
-
-
-
