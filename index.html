@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JUDUL BARU -->
+    <title>Substansi Dakwah Nabi Saw: Tiga Pilar Ukhuwah</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat font Libre Baskerville -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <!-- Memuat html2canvas untuk fitur unduh hasil -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        /* Mengatur font default dan scroll-behavior */
+        body {
+            font-family: 'Libre Baskerville', serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Styling tambahan untuk kuis */
+        .quiz-option {
+            transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        .quiz-option.selected {
+            background-color: #fef3c7; /* amber-100 */
+            border-color: #f59e0b; /* amber-500 */
+        }
+        .quiz-option:hover {
+            background-color: #fefce8; /* amber-50 */
+        }
+
+        /* Styling untuk kartu linimasa yang bisa diklik */
+        .timeline-card {
+            cursor: pointer;
+        }
+        /* Efek hover pada kartu linimasa */
+        .timeline-card > div.ml-8:hover > div.shadow-lg {
+            --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            --tw-ring-color: #f59e0b; /* amber-500 */
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            transform: translateY(-2px);
+            transition: all 0.2s ease-out;
+        }
+        
+        /* Styling untuk konten di dalam modal rincian */
+        .prose p {
+            margin-bottom: 1.25em; /* Jarak antar paragraf */
+            line-height: 1.7; /* Keterbacaan yang lebih baik */
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-gray-900">
+
+    <!-- Header (BARU) -->
+    <header class="text-center py-12 md:py-16 px-4 bg-amber-100 shadow-md">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">Substansi Dakwah Nabi Muhammad Saw.</h1>
+        <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            Menelusuri tiga pilar persaudaraan: Ukhuwah Islamiyah, Insaniyah Basyariyah, dan Wathaniyah.
+        </p>
+    </header>
+
+    <!-- Kontainer Linimasa Utama (BARU) -->
+    <main class="container mx-auto max-w-4xl p-4 md:p-8">
+        
+        <div class="relative border-l-4 border-amber-400 ml-6 md:ml-12 pt-4" id="timelineWrapper">
+
+            <!-- PROLOG: JAHILIYAH (DIHAPUS) -->
+            <!-- BABAK I: DAKWAH MEKKAH (DIHAPUS) -->
+
+            <!-- BABAK II: HIJRAH -->
+            <div class="mb-12 relative timeline-card" data-target="babak2">
+                <div class="absolute -left-[1.45rem] top-1 w-6 h-6 bg-amber-50 border-4 border-green-400 rounded-full"></div>
+                <div class="ml-8 md:ml-12">
+                    <span class="text-sm font-semibold text-green-600 ml-6 md:ml-0">PROLOG: MASYARAKAT BARU</span>
+                    <div class="p-6 bg-green-50 rounded-lg shadow-lg mt-2">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Hijrah ke Madinah (Yatsrib)</h3>
+                        <p class="text-gray-700">Bukan sekadar migrasi fisik, Hijrah adalah titik balik pembentukan sebuah Ummah (komunitas). Di Madinah yang majemuk, Nabi Saw. meletakkan tiga pilar Ukhuwah.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BABAK III: UKHUWAH ISLAMIYAH -->
+            <div class="mb-12 relative timeline-card" data-target="babak3">
+                <div class="absolute -left-[1.45rem] top-1 w-6 h-6 bg-amber-50 border-4 border-yellow-400 rounded-full"></div>
+                <div class="ml-8 md:ml-12">
+                    <span class="text-sm font-semibold text-yellow-600 ml-6 md:ml-0">PILAR I: UKHUWAH ISLAMIYAH</span>
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-lg mt-2">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Persaudaraan Kaum Muhajirin & Anshar</h3>
+                        <p class="text-gray-700">Nabi Saw. mempersaudarakan kaum Muhajirin (pendatang Mekkah) dan Anshar (penduduk Madinah). Ikatan iman yang baru ini melampaui ikatan darah dan suku yang lama.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BABAK IV: UKHUWAH INSANIYAH -->
+            <div class="mb-12 relative timeline-card" data-target="babak4">
+                <div class="absolute -left-[1.45rem] top-1 w-6 h-6 bg-amber-50 border-4 border-purple-400 rounded-full"></div>
+                <div class="ml-8 md:ml-12">
+                    <span class="text-sm font-semibold text-purple-600 ml-6 md:ml-0">PILAR II: UKHUWAH INSANIYAH</span>
+                    <div class="p-6 bg-purple-50 rounded-lg shadow-lg mt-2">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Piagam Madinah (Persaudaraan Kemanusiaan)</h3>
+                        <p class="text-gray-700">Nabi Saw. menyusun konstitusi tertulis pertama di dunia: Piagam Madinah. Piagam ini menjamin hak dan kebebasan beragama bagi komunitas non-Muslim (Yahudi, dll) sebagai bagian dari masyarakat Madinah.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BABAK V: UKHUWAH WATHANIYAH -->
+            <div class="mb-12 relative timeline-card" data-target="babak5">
+                <div class="absolute -left-[1.45rem] top-1 w-6 h-6 bg-amber-50 border-4 border-red-400 rounded-full"></div>
+                <div class="ml-8 md:ml-12">
+                    <span class="text-sm font-semibold text-red-600 ml-6 md:ml-0">PILAR III: UKHUWAH WATHANIYAH</span>
+                    <div class="p-6 bg-red-50 rounded-lg shadow-lg mt-2">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Satu Bangsa (Persaudaraan Kebangsaan)</h3>
+                        <p class="text-gray-700">Piagam Madinah juga menegaskan bahwa semua penduduk Madinah—Muslim maupun non-Muslim—adalah satu *Ummah* (bangsa) yang wajib bersama-sama membela *Wathan* (tanah air) mereka dari serangan musuh.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BABAK VI: FATHU MAKKAH (DIHAPUS) -->
+            <!-- EPILOG: HAJI WADA' (DIHAPUS) -->
+        
+        </div> <!-- Penutup timelineWrapper -->
+
+    </main>
+
+    <!-- Bagian Kuis (TEKS DIPERBARUI) -->
+    <section class="container mx-auto max-w-4xl p-4 md:p-8 text-center">
+        <div class="bg-white p-8 rounded-lg shadow-xl border-2 border-amber-300">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Uji Pemahaman Anda</h2>
+            <!-- JUMLAH SOAL DIPERBARUI -->
+            <p class="text-lg text-gray-700 mb-6">Setelah menelusuri substansi dakwah Nabi, buktikan pemahaman Anda tentang tiga pilar ukhuwah. Kuis ini akan memilih 20 soal HOTS secara acak dari bank data 50 soal dan akan berjalan dalam mode layar penuh.</p>
+            <button id="startQuizBtn" class="w-full md:w-auto bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-10 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-xl">
+                Mulai Kuis Sekarang
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal: Info Pengguna (Struktur Tetap) -->
+    <div id="userInfoModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-900">Masukkan Data Diri</h2>
+            <form id="userInfoForm">
+                <div class="mb-4">
+                    <label for="userName" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap:</label>
+                    <input type="text" id="userName" name="userName" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="mb-6">
+                    <label for="userClass" class="block text-sm font-medium text-gray-700 mb-1">Kelas/Instansi:</label>
+                    <input type="text" id="userClass" name="userClass" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+                <button id="submitInfoBtn" type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                    Mulai Kuis
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Kuis Berlangsung (Struktur Tetap) -->
+    <div id="quizModal" class="hidden fixed inset-0 bg-white p-4 md:p-8 z-50 overflow-y-auto">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header Kuis -->
+            <div class="flex justify-between items-center mb-6">
+                <!-- JUDUL KUIS BARU -->
+                <h2 class="text-xl md:text-2xl font-bold text-amber-600">Kuis Tiga Pilar Ukhuwah</h2>
+                <div id="questionCounter" class="text-lg font-semibold text-gray-700">Soal 1 dari 20</div>
+            </div>
+            
+            <!-- Konten Soal -->
+            <div class="bg-amber-50 p-6 md:p-8 rounded-lg shadow-inner border border-amber-200">
+                <div id="questionText" class="text-lg md:text-xl font-medium text-gray-900 mb-6 min-h-[6rem]">
+                    Memuat soal...
+                </div>
+                <div id="optionsContainer" class="space-y-4">
+                    <!-- Opsi akan dimuat di sini oleh JavaScript -->
+                </div>
+            </div>
+
+            <!-- Navigasi Kuis -->
+            <div class="flex justify-between mt-8">
+                <button id="prevQuestionBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-8 rounded-lg shadow transition-transform transform hover:scale-105 hidden">
+                    Sebelumnya
+                </button>
+                <button id="nextQuestionBtn" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg shadow transition-transform transform hover:scale-105 ml-auto">
+                    Selanjutnya
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Hasil Kuis (Struktur Tetap) -->
+    <div id="resultModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-40">
+        <div class="w-full max-w-lg">
+            <!-- ID "resultCard" digunakan untuk tangkapan layar -->
+            <div id="resultCard" class="bg-white p-8 rounded-lg shadow-2xl text-center">
+                <h2 class="text-3xl font-bold mb-4 text-gray-900">Kuis Selesai!</h2>
+                
+                <div class="mb-6">
+                    <div id="resultName" class="text-2xl font-semibold text-amber-600">Nama Pengguna</div>
+                    <div id="resultClass" class="text-lg text-gray-600">Kelas/Instansi</div>
+                </div>
+                
+                <div class="my-8">
+                    <div class="text-sm font-semibold text-gray-500 uppercase">SKOR AKHIR</div>
+                    <div id="resultScore" class="text-8xl font-extrabold text-gray-900">100</div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-3">
+                    <button id="downloadBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                        Unduh Hasil (PNG)
+                    </button>
+                    <button id="waBtn" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                        Kirim ke WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Rincian Linimasa (Struktur Tetap) -->
+    <div id="detailsModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col">
+            <!-- Header Modal -->
+            <div class="flex justify-between items-center mb-4 flex-shrink-0">
+                <h2 id="detailsTitle" class="text-2xl font-bold text-gray-900">Rincian Babak</h2>
+                <button id="closeDetailsBtn" class="text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
+            </div>
+            <!-- Konten Scrollable -->
+            <div id="detailsContent" class="prose max-w-none overflow-y-auto text-gray-700">
+                <!-- Konten rincian akan dimuat di sini oleh JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // --- BANK DATA RINCIAN LINIMASA (BARU) ---
+    const timelineDetails = {
+        // 'prolog' DIHAPUS
+        // 'babak1' DIHAPUS
+        babak2: {
+            title: "Babak II: Hijrah dan Pembentukan Masyarakat Baru",
+            content: `
+                <p>Hijrah ke Madinah (dulu bernama Yatsrib) pada tahun 622 M bukan sekadar migrasi fisik untuk menghindari penindasan. Ini adalah sebuah langkah strategis untuk membangun sebuah <strong>'Ummah'</strong> atau komunitas politik-sosial yang merdeka.</p>
+                <p>Kondisi Madinah sangat majemuk, terdiri dari berbagai suku Arab (Aus dan Khazraj) yang telah berperang saudara selama seratus tahun, serta komunitas Yahudi yang signifikan (Bani Qaynuqa, Bani Nadhir, Bani Qurayzah).</p>
+                <p>Di kota inilah Nabi Saw. meletakkan tiga pilar persaudaraan sebagai fondasi masyarakat baru: Ukhuwah Islamiyah (internal umat Islam), Ukhuwah Insaniyah (dengan komunitas lain), dan Ukhuwah Wathaniyah (sebagai satu bangsa).</p>
+            `
+        },
+        babak3: {
+            title: "Pilar I: Ukhuwah Islamiyah (Persaudaraan Seiman)",
+            content: `
+                <p>Langkah pertama Nabi Saw. di Madinah adalah membangun persaudaraan internal umat Islam. Beliau melakukan <strong>'Mu'akhah'</strong> (mempersaudarakan) antara:</p>
+                <ul>
+                    <li><strong>Kaum Muhajirin:</strong> Pendatang dari Mekkah yang meninggalkan harta dan keluarga mereka.</li>
+                    <li><strong>Kaum Anshar:</strong> Penduduk asli Madinah yang menerima dan menolong kaum Muhajirin.</li>
+                </ul>
+                <p>Nabi Saw. memasangkan setiap Muhajirin dengan seorang Anshar (misalnya, Abdurrahman bin Auf dengan Sa'ad bin Rabi'). Persaudaraan ini begitu kuat sehingga kaum Anshar bersedia membagi dua harta mereka.</p>
+                <p>Ini adalah revolusi sosial. Ikatan iman (aqidah) yang baru terbukti mampu melampaui ikatan darah ('Ashabiyah) dan kesukuan (Aus dan Khazraj) yang telah memecah belah mereka selama berabad-abad.</p>
+            `
+        },
+        babak4: {
+            title: "Pilar II: Ukhuwah Insaniyah (Persaudaraan Kemanusiaan)",
+            content: `
+                <p>Setelah internal umat Islam kuat, Nabi Saw. membangun pilar kedua: persaudaraan kemanusiaan (disebut juga <em>ukhuwah basyariyah</em>). Ini diwujudkan melalui <strong>Piagam Madinah (Shahifah Madinah)</strong>.</p>
+                <p>Piagam Madinah adalah konstitusi tertulis pertama dalam sejarah manusia, yang dibuat atas kesepakatan bersama antara komunitas Muslim dengan komunitas non-Muslim, terutama suku-suku Yahudi di Madinah.</p>
+                <p>Substansinya revolusioner:</p>
+                <ul>
+                    <li>Pengakuan atas eksistensi dan identitas setiap komunitas.</li>
+                    <li><strong>Jaminan kebebasan beragama:</strong> "Bagi kaum Muslimin agama mereka, dan bagi kaum Yahudi agama mereka."</li>
+                    <li>Perlindungan atas hak milik dan jiwa bagi semua warga.</li>
+                    <li>Menetapkan keadilan sebagai hukum tertinggi, menggantikan hukum rimba kesukuan.</li>
+                </ul>
+                <p>Ini adalah praktik nyata toleransi dan pengakuan terhadap pluralisme, fondasi dari Ukhuwah Insaniyah.</p>
+            `
+        },
+        babak5: {
+            title: "Pilar III: Ukhuwah Wathaniyah (Persaudaraan Kebangsaan)",
+            content: `
+                <p>Pilar ketiga ini juga lahir dari Piagam Madinah. Selain menjamin hak-hak individu (Insaniyah), Piagam Madinah menciptakan sebuah entitas kebangsaan yang baru.</p>
+                <p>Pasal-pasal dalam Piagam Madinah secara tegas menyatakan bahwa seluruh penduduk Madinah—baik Muslim, Yahudi, maupun penyembah berhala yang ikut menandatangani—adalah <strong>"Ummah Wahidah" (satu bangsa/komunitas)</strong>.</p>
+                <p>Mereka bukan lagi hanya Suku Aus, Khazraj, atau Bani Qaynuqa. Mereka adalah 'warga negara' Madinah. Konsekuensinya, mereka memiliki <strong>kewajiban yang sama untuk membela 'Wathan' (tanah air)</strong> mereka, Madinah, jika ada serangan dari musuh luar.</p>
+                <p>Ini adalah konsep persaudaraan kebangsaan, di mana loyalitas pada negara (tanah air bersama) menjadi pengikat di atas perbedaan agama dan suku.</p>
+            `
+        }
+        // 'babak6' DIHAPUS
+        // 'epilog' DIHAPUS
+    };
+
+    // --- BANK SOAL (DIPERBARUI JADI 14 SOAL) ---
+    const quizData = [
+        // PROLOG & BAB I (DIHAPUS)
+        
+        // BAB II & III (ISLAMIYAH)
+        {
+            question: "Langkah strategis 'Mu'akhah' (mempersaudarakan) yang dilakukan Nabi Saw. di Madinah bertujuan utama untuk....",
+            options: [
+                "A. Membangun Ukhuwah Insaniyah dengan kaum Yahudi.",
+                "B. Mempersiapkan pasukan perang untuk melawan Mekkah.",
+                "C. Mengganti ikatan darah (kesukuan) dengan ikatan iman (aqidah) antara Muhajirin dan Anshar.",
+                "D. Mendistribusikan kekayaan kaum Anshar secara merata kepada semua penduduk Madinah.",
+                "E. Membentuk dewan legislatif pertama di Madinah."
+            ],
+            correct: 2
+        },
+        {
+            question: "Perbedaan fundamental antara kaum Muhajirin dan Anshar dalam konteks Ukhuwah Islamiyah adalah....",
+            options: [
+                "A. Muhajirin adalah pedagang, Anshar adalah petani.",
+                "B. Muhajirin adalah pendatang dari Mekkah, Anshar adalah penduduk asli Madinah yang memberi pertolongan.",
+                "C. Muhajirin berasal dari suku Quraisy, Anshar berasal dari suku Aus dan Khazraj.",
+                "D. Muhajirin adalah kelompok yang berperang, Anshar adalah kelompok yang berdoa.",
+                "E. Muhajirin kaya raya, Anshar miskin."
+            ],
+            correct: 1
+        },
+        {
+            question: "Contoh nyata penerapan Ukhuwah Islamiyah di Madinah adalah kesediaan kaum Anshar untuk....",
+            options: [
+                "A. Menyerahkan kepemimpinan politik Madinah sepenuhnya kepada Muhajirin.",
+                "B. Membagi dua harta mereka untuk saudara Muhajirin yang dipersaudarakan dengannya.",
+                "C. Mengubah keyakinan mereka agar sama persis dengan keyakinan Muhajirin.",
+                "D. Membayar upeti tahunan kepada Nabi Muhammad Saw.",
+                "E. Mengusir kaum Yahudi dari Madinah demi kaum Muhajirin."
+            ],
+            correct: 1
+        },
+        // BAB IV (INSANIYAH)
+        {
+            question: "Pilar Ukhuwah Insaniyah (Kemanusiaan) yang diterapkan Nabi Saw. di Madinah paling jelas terlihat dalam....",
+            options: [
+                "A. Pembangunan Masjid Nabawi sebagai pusat ibadah.",
+                "B. Perang Badar melawan kaum kafir Quraisy Mekkah.",
+                "C. Penerbitan Piagam Madinah yang menjamin kebebasan beragama bagi non-Muslim.",
+                "D. Persaudaraan eksklusif antara Muhajirin dan Anshar.",
+                "E. Pemberian sedekah wajib (zakat) kepada fakir miskin."
+            ],
+            correct: 2
+        },
+        {
+            question: "Piagam Madinah dianggap revolusioner pada zamannya karena....",
+            options: [
+                "A. Ini adalah piagam yang menghapuskan semua agama selain Islam.",
+                "B. Ini adalah konstitusi pertama yang menyatukan semua suku Arab di bawah satu raja.",
+                "C. Ini adalah perjanjian militer untuk menyerang Imperium Romawi.",
+                "D. Ini adalah dokumen hukum yang mengakui pluralisme dan menjamin hak-hak sipil bagi komunitas non-Muslim.",
+                "E. Ini adalah kitab undang-undang ekonomi yang mengatur pasar."
+            ],
+            correct: 3
+        },
+        {
+            question: "Substansi Ukhuwah Insaniyah/Basyariyah adalah pengakuan bahwa....",
+            options: [
+                "A. Semua manusia bersaudara karena berasal dari satu iman yang sama.",
+                "B. Semua manusia bersaudara karena berasal dari satu nenek moyang yang sama (Adam).",
+                "C. Persaudaraan hanya berlaku bagi mereka yang tinggal di Madinah.",
+                "D. Non-Muslim adalah saudara jika mereka membayar pajak (jizyah).",
+                "E. Persaudaraan hanya berlaku bagi mereka yang memiliki ikatan darah."
+            ],
+            correct: 1
+        },
+        {
+            question: "Dalam Piagam Madinah, frasa 'Bagi kaum Muslimin agama mereka, dan bagi kaum Yahudi agama mereka' menunjukkan prinsip....",
+            options: [
+                "A. Asimilasi budaya, di mana semua harus menjadi satu.",
+                "B. Segregasi total, di mana kedua kaum tidak boleh berinteraksi.",
+                "C. Toleransi dan jaminan kebebasan berkeyakinan.",
+                "D. Dominasi politik kaum Muslim atas kaum Yahudi.",
+                "E. Sinkretisme agama, mencampurkan ajaran Islam dan Yahudi."
+            ],
+            correct: 2
+        },
+        // BAB V (WATHANIYAH)
+        {
+            question: "Konsep 'Ukhuwah Wathaniyah' (Persaudaraan Kebangsaan) dalam konteks Piagam Madinah merujuk pada....",
+            options: [
+                "A. Kewajiban semua suku Arab untuk bersatu melawan non-Arab.",
+                "B. Kesepakatan semua penduduk Madinah (Muslim & non-Muslim) sebagai satu 'Ummah' (bangsa) yang sama-sama membela tanah air.",
+                "C. Larangan bagi penduduk Madinah untuk bepergian ke luar negeri.",
+                "D. Persaudaraan khusus antara suku Aus dan Khazraj.",
+                "E. Kewajiban non-Muslim untuk mengikuti ajaran Islam demi persatuan."
+            ],
+            correct: 1
+        },
+        {
+            question: "Implikasi dari Ukhuwah Wathaniyah di Madinah adalah bahwa loyalitas tertinggi warga adalah kepada....",
+            options: [
+                "A. Kepala suku (Kabilah) masing-masing.",
+                "B. Kesepakatan bersama (konstitusi Piagam Madinah) dan keamanan tanah air (Wathan).",
+                "C. Aliansi dagang dengan Mekkah.",
+                "D. Kekuatan militer yang paling dominan.",
+                "E. Tradisi dan adat istiadat nenek moyang (Jahiliyah)."
+            ],
+            correct: 1
+        },
+        {
+            question: "Perbedaan utama antara Ukhuwah Islamiyah dan Ukhuwah Wathaniyah di Madinah adalah....",
+            options: [
+                "A. Islamiyah berbasis ikatan iman (internal Muslim), Wathaniyah berbasis ikatan kewarganegaraan (Muslim & non-Muslim).",
+                "B. Islamiyah adalah urusan sosial, Wathaniyah adalah urusan ekonomi.",
+                "C. Islamiyah hanya untuk Muhajirin, Wathaniyah hanya untuk Anshar.",
+                "D. Islamiyah bersifat temporer, Wathaniyah bersifat permanen.",
+                "E. Tidak ada perbedaan, keduanya adalah konsep yang sama."
+            ],
+            correct: 0
+        },
+        // BAB VI (FATHU MAKKAH) (DIHAPUS)
+        // EPILOG (HAJI WADA') (DIHAPUS)
+        
+        // KESELURUHAN (HOTS)
+        {
+            question: "Menganalisis ketiga pilar ukhuwah, urutan prioritas yang logis dalam pembangunannya di Madinah adalah....",
+            options: [
+                "A. Wathaniyah (bangsa), lalu Insaniyah (kemanusiaan), lalu Islamiyah (iman).",
+                "B. Islamiyah (memperkuat internal), lalu Insaniyah (perjanjian dengan non-Muslim), lalu Wathaniyah (membentuk negara-bangsa).",
+                "C. Insaniyah (kemanusiaan), lalu Wathaniyah (bangsa), lalu Islamiyah (iman).",
+                "D. Ketiganya dibangun secara bersamaan tanpa urutan karena sama pentingnya.",
+                "E. Wathaniyah (bangsa) adalah satu-satunya yang penting, yang lain hanya pelengkap."
+            ],
+            correct: 1
+        },
+        {
+            question: "Piagam Madinah adalah dokumen yang meletakkan dasar bagi Ukhuwah Insaniyah dan Ukhuwah Wathaniyah secara bersamaan. Ini karena piagam tersebut....",
+            options: [
+                "A. Memaksa non-Muslim masuk Islam demi persatuan bangsa.",
+                "B. Mengakui hak individu non-Muslim (Insaniyah) sekaligus mengikat mereka dalam satu komunitas politik (Wathaniyah).",
+                "C. Hanya mengatur hubungan antar suku-suku Muslim.",
+                "D. Menghapuskan semua identitas suku dan agama.",
+                "E. Merupakan perjanjian dagang murni antara Madinah dan Mekkah."
+            ],
+            correct: 1
+        },
+        {
+            question: "Yang BUKAN merupakan substansi dakwah Nabi Saw. untuk membangun masyarakat yang ber-ukhuwah adalah....",
+            options: [
+                "A. Menanamkan Tauhid untuk kesetaraan.",
+                "B. Menghapus 'Ashabiyah' (fanatisme kesukuan).",
+                "C. Menjamin kebebasan beragama bagi komunitas lain.",
+                "D. Membangun loyalitas kebangsaan (tanah air) bersama.",
+                "E. Mempertahankan superioritas suku Quraisy sebagai pemimpin."
+            ],
+            correct: 4
+        },
+        {
+            question: "Bagaimana dakwah Nabi Saw. mendamaikan potensi konflik antara Ukhuwah Islamiyah (loyalitas agama) dan Ukhuwah Wathaniyah (loyalitas negara)?",
+            options: [
+                "A. Dengan menyatakan bahwa Ukhuwah Islamiyah tidak penting.",
+                "B. Dengan mewajibkan non-Muslim berperang di garis depan.",
+                "C. Dengan memisahkan total urusan agama dan negara (sekularisme).",
+                "D. Dengan menjadikan Piagam Madinah sebagai kontrak sosial yang mengikat semua warga (Muslim/non-Muslim) untuk membela negara, sementara urusan internal agama tetap dihormati.",
+                "E. Dengan menyatakan bahwa Ukhuwah Wathaniyah hanya berlaku jika negara tersebut dipimpin oleh seorang Muslim."
+            ],
+            correct: 3
+        }
+        // --- PENAMBAHAN 36 SOAL BARU (TOTAL 50) ---
+        ,
+        {
+            question: "Apa arti harfiah dari 'Muhajirin' dalam konteks Ukhuwah Islamiyah?",
+            options: [
+                "A. Kaum Penolong",
+                "B. Kaum Pendatang/Imigran",
+                "C. Kaum Petani",
+                "D. Kaum Beriman",
+                "E. Kaum Bangsawan"
+            ],
+            correct: 1
+        },
+        {
+            question: "Apa arti harfiah dari 'Anshar' dalam konteks Ukhuwah Islamiyah?",
+            options: [
+                "A. Kaum Penolong",
+                "B. Kaum Pendatang/Imigran",
+                "C. Kaum Pedagang",
+                "D. Kaum yang Disucikan",
+                "E. Kaum yang Bertani"
+            ],
+            correct: 0
+        },
+        {
+            question: "Siapa dua sahabat yang dipersaudarakan oleh Nabi Saw. sebagai contoh Mu'akhah yang terkenal, di mana kaum Anshar menawarkan setengah hartanya?",
+            options: [
+                "A. Abu Bakar dan Umar bin Khattab",
+                "B. Utsman bin Affan dan Ali bin Abi Thalib",
+                "C. Sa'ad bin Rabi' (Anshar) dan Abdurrahman bin Auf (Muhajirin)",
+                "D. Bilal bin Rabah dan Salman Al-Farisi",
+                "E. Abu Dzar Al-Ghifari dan Abu Hurairah"
+            ],
+            correct: 2
+        },
+        {
+            question: "Apa dampak ekonomi utama dari penerapan Ukhuwah Islamiyah (Mu'akhah) di Madinah?",
+            options: [
+                "A. Menciptakan sistem kasta baru antara Muhajirin dan Anshar.",
+                "B. Memberikan jaring pengaman sosial dan ekonomi bagi kaum Muhajirin yang baru tiba tanpa harta.",
+                "C. Memonopoli pasar Madinah oleh kaum Muhajirin.",
+                "D. Menghapuskan seluruh hutang penduduk Madinah.",
+                "E. Mewajibkan semua penduduk membayar pajak kepada Nabi Saw."
+            ],
+            correct: 1
+        },
+        {
+            question: "Sistem sosial apa yang ingin digantikan oleh Nabi Saw. melalui konsep Ukhuwah Islamiyah?",
+            options: [
+                "A. Sistem Monarki Absolut",
+                "B. Sistem Feodalisme",
+                "C. 'Ashabiyah (Fanatisme kesukuan dan ikatan darah)",
+                "D. Demokrasi Liberal",
+                "E. Sistem kasta berdasarkan kekayaan"
+            ],
+            correct: 2
+        },
+        {
+            question: "Nama kota Madinah sebelum Hijrah Nabi Saw. adalah....",
+            options: [
+                "A. Mekkah Al-Mukarramah",
+                "B. Yatsrib",
+                "C. Konstantinopel",
+                "D. Syam",
+                "E. Habasyah"
+            ],
+            correct: 1
+        },
+        {
+            question: "Dua suku besar di Yatsrib yang terus-menerus berperang sebelum kedatangan Islam adalah....",
+            options: [
+                "A. Quraisy dan Tsaqif",
+                "B. Bani Qaynuqa dan Bani Nadhir",
+                "C. Aus dan Khazraj",
+                "D. Ghassan dan Kindah",
+                "E. Muhajirin dan Anshar"
+            ],
+            correct: 2
+        },
+        {
+            question: "Ukhuwah Islamiyah (Mu'akhah) berhasil menyatukan suku Aus dan Khazraj di bawah panji....",
+            options: [
+                "A. Kaum Muhajirin",
+                "B. Kaum Anshar",
+                "C. Kaum Quraisy",
+                "D. Kepemimpinan Nabi Muhammad Saw.",
+                "E. Bangsa Arab"
+            ],
+            correct: 1
+        },
+        {
+            question: "Piagam Madinah juga dikenal dengan sebutan 'Shahifah Madinah', yang artinya....",
+            options: [
+                "A. Perjanjian Damai Madinah",
+                "B. Kitab Undang-Undang Madinah",
+                "C. Deklarasi Perang Madinah",
+                "D. Lembaran (Konstitusi) Madinah",
+                "E. Sejarah Tulis Madinah"
+            ],
+            correct: 3
+        },
+        {
+            question: "Siapa yang menjadi 'Kepala Negara' atau 'Arbiter Utama' berdasarkan kesepakatan dalam Piagam Madinah?",
+            options: [
+                "A. Pemimpin suku Aus",
+                "B. Pemimpin suku Khazraj",
+                "C. Pemimpin komunitas Yahudi",
+                "D. Nabi Muhammad Saw.",
+                "E. Dewan tetua yang dipilih secara acak"
+            ],
+            correct: 3
+        },
+        {
+            question: "Apa jaminan utama yang diberikan Piagam Madinah kepada komunitas non-Muslim (seperti Yahudi) yang BUKAN bagian dari Ukhuwah Insaniyah?",
+            options: [
+                "A. Jaminan kebebasan beragama dan menjalankan ibadah.",
+                "B. Jaminan perlindungan jiwa dan harta benda.",
+                "C. Jaminan persamaan hukum di depan konstitusi.",
+                "D. Jaminan hak untuk memimpin negara Madinah secara bergantian.",
+                "E. Jaminan kebebasan dari kewajiban membela negara."
+            ],
+            correct: 3
+        },
+        {
+            question: "Dalam Ukhuwah Wathaniyah, apa kewajiban bersama yang mengikat Muslim dan non-Muslim Madinah?",
+            options: [
+                "A. Membayar zakat kepada Nabi Muhammad Saw.",
+                "B. Mengikuti ibadah shalat Jumat di Masjid Nabawi.",
+                "C. Bekerja sama mempertahankan Madinah dari serangan musuh luar.",
+                "D. Menyerang kota Mekkah secara bersama-sama.",
+                "E. Mempelajari Al-Qur'an dan Hadits."
+            ],
+            correct: 2
+        },
+        {
+            question: "Istilah 'Ummah Wahidah' (Satu Bangsa) dalam Piagam Madinah merujuk kepada....",
+            options: [
+                "A. Hanya kaum Muhajirin dan Anshar.",
+                "B. Hanya seluruh suku-suku Arab.",
+                "C. Hanya komunitas Muslim.",
+                "D. Seluruh penduduk Madinah (Muslim & non-Muslim) sebagai satu entitas politik.",
+                "E. Seluruh umat Islam di dunia."
+            ],
+            correct: 3
+        },
+        {
+            question: "Konsep Ukhuwah Wathaniyah di Madinah merupakan bentuk awal dari....",
+            options: [
+                "A. Patriotisme dan Nasionalisme (cinta tanah air)",
+                "B. Globalisasi",
+                "C. Sekularisme",
+                "D. Imperialisme",
+                "E. Anarkisme"
+            ],
+            correct: 0
+        },
+        {
+            question: "Jika seorang Yahudi warga Madinah berselisih dengan seorang Muslim, penyelesaiannya menurut Piagam Madinah adalah....",
+            options: [
+                "A. Diserahkan kepada hukum adat suku masing-masing.",
+                "B. Diadili oleh dewan pendeta Yahudi.",
+                "C. Diadili oleh hukum Islam (syariah).",
+                "D. Diserahkan kepada Nabi Muhammad Saw. sebagai arbiter tertinggi.",
+                "E. Perang antar suku."
+            ],
+            correct: 3
+        },
+        {
+            question: "Pilar ukhuwah manakah yang berfokus pada hubungan *internal* umat Islam?",
+            options: [
+                "A. Ukhuwah Islamiyah",
+                "B. Ukhuwah Insaniyah",
+                "C. Ukhuwah Wathaniyah",
+                "D. Ukhuwah Basyariyah",
+                "E. Ukhuwah Quraisy"
+            ],
+            correct: 0
+        },
+        {
+            question: "Pilar ukhuwah manakah yang berfokus pada hubungan *antar-umat beragama* dalam konteks kemanusiaan?",
+            options: [
+                "A. Ukhuwah Islamiyah",
+                "B. Ukhuwah Insaniyah / Basyariyah",
+                "C. Ukhuwah Wathaniyah",
+                "D. Ukhuwah Anshariyah",
+                "E. Ukhuwah Muhajirin"
+            ],
+            correct: 1
+        },
+        {
+            question: "Pilar ukhuwah manakah yang berfokus pada loyalitas bersama kepada *tanah air* (negara)?",
+            options: [
+                "A. Ukhuwah Islamiyah",
+                "B. Ukhuwah Insaniyah",
+                "C. Ukhuwah Wathaniyah",
+                "D. Ukhuwah Arabiyah",
+                "E. Ukhuwah Basyariyah"
+            ],
+            correct: 2
+        },
+        {
+            question: "Seorang warga Yahudi di Madinah terikat oleh pilar ukhuwah yang mana saja?",
+            options: [
+                "A. Hanya Ukhuwah Islamiyah",
+                "B. Hanya Ukhuwah Insaniyah",
+                "C. Hanya Ukhuwah Wathaniyah",
+                "D. Ukhuwah Islamiyah dan Insaniyah",
+                "E. Ukhuwah Insaniyah dan Wathaniyah"
+            ],
+            correct: 4
+        },
+        {
+            question: "Seorang warga Muslim (Muhajirin) di Madinah terikat oleh pilar ukhuwah yang mana saja?",
+            options: [
+                "A. Hanya Ukhuwah Islamiyah",
+                "B. Ukhuwah Insaniyah dan Wathaniyah",
+                "C. Ukhuwah Islamiyah, Insaniyah, dan Wathaniyah",
+                "D. Hanya Ukhuwah Wathaniyah",
+                "E. Hanya Ukhuwah Insaniyah"
+            ],
+            correct: 2
+        },
+        {
+            question: "Hijrah dijadikan sebagai awal Kalender Islam (Tahun Hijriyah) karena peristiwa ini menandai....",
+            options: [
+                "A. Kemenangan perang pertama umat Islam.",
+                "B. Turunnya wahyu Al-Qur'an yang pertama.",
+                "C. Kelahiran Nabi Muhammad Saw.",
+                "D. Wafatnya Nabi Muhammad Saw.",
+                "E. Transformasi dari komunitas berbasis iman menjadi komunitas berdaulat (Ummah/Negara)."
+            ],
+            correct: 4
+        },
+        {
+            question: "Apa arti dari 'Ashabiyah' yang ingin dihapuskan oleh Nabi Saw.?",
+            options: [
+                "A. Fanatisme buta terhadap suku, klan, atau ikatan darah.",
+                "B. Semangat untuk mencari ilmu pengetahuan.",
+                "C. Kepercayaan terhadap banyak dewa (politeisme).",
+                "D. Sistem perdagangan yang adil.",
+                "E. Cinta terhadap tanah air (patriotisme)."
+            ],
+            correct: 0
+        },
+        {
+            question: "Bagaimana Piagam Madinah mengatur 'biaya perang' (diyat) atau uang tebusan?",
+            options: [
+                "A. Dihapuskan seluruhnya.",
+                "B. Ditanggung oleh individu yang melakukan kejahatan.",
+                "C. Ditanggung bersama oleh suku atau aliansi terkait (tidak dibebankan pada individu lemah).",
+                "D. Ditanggung oleh Nabi Muhammad Saw. pribadi.",
+                "E. Ditanggung oleh seluruh warga Madinah secara merata."
+            ],
+            correct: 2
+        },
+        {
+            question: "Konsep 'Dhimmi' (warga non-Muslim yang dilindungi) dalam Fiqh Islam adalah pengembangan lebih lanjut dari prinsip....",
+            options: [
+                "A. Ukhuwah Islamiyah",
+                "B. Ukhuwah Insaniyah (Piagam Madinah)",
+                "C. Ukhuwah Muhajirin",
+                "D. 'Ashabiyah",
+                "E. Perang Badar"
+            ],
+            correct: 1
+        },
+        {
+            question: "Mengapa Nabi Muhammad Saw. memilih hijrah ke Madinah (Yatsrib) daripada ke tempat lain seperti Habasyah (Ethiopia)?",
+            options: [
+                "A. Karena Madinah lebih kaya secara ekonomi.",
+                "B. Karena Madinah telah menawarkan bai'at (janji setia) dan siap menjadi basis negara baru.",
+                "C. Karena Habasyah adalah negara Kristen yang memusuhi Islam.",
+                "D. Karena jarak Madinah lebih dekat ke Mekkah.",
+                "E. Karena Madinah memiliki pasukan militer terkuat."
+            ],
+            correct: 1
+        },
+        {
+            question: "Apa yang dimaksud dengan 'Bai'at Aqabah'?",
+            options: [
+                "A. Perjanjian damai dengan kaum Quraisy Mekkah.",
+                "B. Janji setia penduduk Yatsrib (Aus & Khazraj) kepada Nabi Saw. sebelum hijrah.",
+                "C. Deklarasi perang terhadap Romawi.",
+                "D. Prosesi pernikahan Nabi Saw. dengan Aisyah.",
+                "E. Perjanjian dagang dengan kaum Yahudi."
+            ],
+            correct: 1
+        },
+        {
+            question: "Tindakan pertama yang dilakukan Nabi Saw. setibanya di Madinah (selain Mu'akhah) adalah....",
+            options: [
+                "A. Membangun pasar",
+                "B. Membangun Masjid Nabawi",
+                "C. Mencetak mata uang",
+                "D. Menulis Piagam Madinah",
+                "E. Membangun benteng pertahanan"
+            ],
+            correct: 1
+        },
+        {
+            question: "Mengapa pembangunan Masjid Nabawi sangat penting bagi masyarakat baru Madinah?",
+            options: [
+                "A. Hanya sebagai tempat shalat berjamaah.",
+                "B. Sebagai pusat ibadah, pemerintahan, pendidikan, dan sosial (sentral Ukhuwah).",
+                "C. Sebagai benteng pertahanan militer.",
+                "D. Sebagai simbol kekayaan kaum Muslimin.",
+                "E. Untuk menyaingi Ka'bah di Mekkah."
+            ],
+            correct: 1
+        },
+        {
+            question: "Dalam Ukhuwah Wathaniyah, jika ada satu suku Yahudi mengkhianati Piagam Madinah, apa konsekuensinya?",
+            options: [
+                "A. Seluruh komunitas Yahudi lainnya ikut dihukum.",
+                "B. Seluruh non-Muslim diusir dari Madinah.",
+                "C. Suku yang berkhianat akan diadili berdasarkan konstitusi, bukan suku lainnya.",
+                "D. Piagam Madinah otomatis batal seluruhnya.",
+                "E. Nabi Muhammad Saw. akan membayar denda atas nama mereka."
+            ],
+            correct: 2
+        },
+        {
+            question: "Prinsip 'Keadilan Sosial' dalam Piagam Madinah berarti....",
+            options: [
+                "A. Yang kaya harus memberikan semua hartanya kepada yang miskin.",
+                "B. Hukum berlaku sama untuk semua, kuat atau lemah, Muslim atau non-Muslim.",
+                "C. Kaum Muslimin mendapat hak istimewa di pengadilan.",
+                "D. Kaum Muhajirin berhak atas tanah kaum Anshar.",
+                "E. Semua sengketa diselesaikan dengan duel."
+            ],
+            correct: 1
+        },
+        {
+            question: "Manakah dari berikut ini yang BUKAN merupakan fungsi Piagam Madinah?",
+            options: [
+                "A. Menyatukan penduduk Madinah yang majemuk.",
+                "B. Menetapkan konstitusi dan hukum bersama.",
+                "C. Mengatur strategi penyerangan ke Imperium Persia.",
+                "D. Menjamin hak-hak sipil dan kebebasan beragama.",
+                "E. Membentuk aliansi pertahanan bersama (Ukhuwah Wathaniyah)."
+            ],
+            correct: 2
+        },
+        {
+            question: "Dalam konteks modern di Indonesia, Ukhuwah Wathaniyah paling relevan dengan konsep....",
+            options: [
+                "A. Bhinneka Tunggal Ika dan Pancasila",
+                "B. Syariat Islam",
+                "C. chauvinisme (nasionalisme sempit)",
+                "D. Otonomi daerah",
+                "E. Pasar bebas"
+            ],
+            correct: 0
+        },
+        {
+            question: "Dalam konteks modern, Ukhuwah Insaniyah paling relevan dengan....",
+            options: [
+                "A. Organisasi Konferensi Islam (OKI)",
+                "B. Perserikatan Bangsa-Bangsa (PBB) dan Deklarasi HAM.",
+                "C. Pakta pertahanan militer (NATO)",
+                "D. Liga Arab",
+                "E. Persatuan ulama"
+            ],
+            correct: 1
+        },
+        {
+            question: "Sikap kaum Anshar yang rela berbagi dengan Muhajirin menunjukkan sifat....",
+            options: [
+                "A. Riya' (pamer)",
+                "B. 'Itsar (mengutamakan orang lain)",
+                "C. 'Ashabiyah (fanatisme)",
+                "D. Bakhil (kikir)",
+                "E. Takabbur (sombong)"
+            ],
+            correct: 1
+        },
+        {
+            question: "Pelajaran utama dari tiga pilar ukhuwah Nabi Saw. adalah bahwa masyarakat yang kuat....",
+            options: [
+                "A. Harus seragam (homogen) dalam segala hal.",
+                "B. Dibangun di atas fondasi keadilan, pluralisme, dan persatuan, dimulai dari inti yang solid.",
+                "C. Harus memiliki militer terkuat di dunia.",
+                "D. Harus menutup diri dari semua pengaruh luar.",
+                "E. Hanya mementingkan urusan ibadah ritual."
+            ],
+            correct: 1
+        },
+        {
+            question: "Mengapa Piagam Madinah dianggap lebih maju daripada 'Magna Carta' di Inggris?",
+            options: [
+                "A. Karena Piagam Madinah ditulis di atas emas.",
+                "B. Karena Magna Carta hanya mengatur hak bangsawan dan raja, sementara Piagam Madinah menjamin hak seluruh warga negara termasuk minoritas.",
+                "C. Karena Magna Carta ditulis 600 tahun *setelah* Piagam Madinah.",
+                "D. Jawaban B dan C benar.",
+                "E. Karena Magna Carta tidak pernah diterapkan."
+            ],
+            correct: 3
+        }
+    ];
+
+
+    // --- VARIABEL GLOBAL ---
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let selectedQuestions = [];
+    let selectedOption = null;
+    let userName = "";
+    let userClass = "";
+    let userAnswers = []; // <-- Variabel baru untuk menyimpan jawaban
+
+    // --- ELEMEN DOM ---
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    const userInfoModal = document.getElementById('userInfoModal');
+    const userInfoForm = document.getElementById('userInfoForm');
+    const submitInfoBtn = document.getElementById('submitInfoBtn');
+    
+    const quizModal = document.getElementById('quizModal');
+    const questionCounter = document.getElementById('questionCounter');
+    const questionText = document.getElementById('questionText');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+    const prevQuestionBtn = document.getElementById('prevQuestionBtn'); // <-- Elemen baru
+
+    const resultModal = document.getElementById('resultModal');
+    const resultCard = document.getElementById('resultCard'); // Untuk screenshot
+    const resultName = document.getElementById('resultName');
+    const resultClass = document.getElementById('resultClass');
+    const resultScore = document.getElementById('resultScore');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const waBtn = document.getElementById('waBtn');
+
+    // --- ELEMEN DOM (BARU) ---
+    const timelineWrapper = document.getElementById('timelineWrapper');
+    const detailsModal = document.getElementById('detailsModal');
+    const detailsTitle = document.getElementById('detailsTitle');
+    const detailsContent = document.getElementById('detailsContent');
+    const closeDetailsBtn = document.getElementById('closeDetailsBtn');
+
+    // --- FUNGSI FULLSCREEN ---
+    const elem = document.documentElement;
+    function openFullscreen() {
+        // Fitur ini dibatasi oleh kebijakan izin di beberapa lingkungan (seperti iframe)
+        // console.log("Mencoba masuk mode layar penuh...");
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { // Firefox
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { // IE/Edge
+            elem.msRequestFullscreen();
+        }
+    }
+
+    function closeFullscreen() {
+        // console.log("Mencoba keluar dari mode layar penuh...");
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { // Firefox
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // IE/Edge
+            document.msExitFullscreen();
+        }
+    }
+
+    // --- FUNGSI KUIS UTAMA ---
+
+    // 1. Acak Soal
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // 2. Tampilkan Modal Info
+    startQuizBtn.addEventListener('click', () => {
+        userInfoModal.classList.remove('hidden');
+    });
+
+    // 3. Submit Info & Mulai Kuis
+    userInfoForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        userName = document.getElementById('userName').value;
+        userClass = document.getElementById('userClass').value;
+        
+        // PERBAIKAN: Tambahkan pemeriksaan validasi input
+        if (userName.trim() && userClass.trim()) {
+            userInfoModal.classList.add('hidden');
+            startQuiz(); // Panggil fungsi startQuiz
+        }
+    }); // <-- PERBAIKAN: Menambahkan ); untuk menutup addEventListener
+
+    // 4. Logika Memulai Kuis (DIPISAHKAN KEMBALI)
+    function startQuiz() {
+        // Reset state
+        currentQuestionIndex = 0;
+        score = 0;
+        selectedOption = null;
+        
+        // Hapus notifikasi force exit jika ada dari sesi sebelumnya
+        const oldNotification = document.getElementById('forceExitNotification');
+        if (oldNotification) {
+            oldNotification.remove();
+        }
+        
+        // Acak dan ambil soal (sekarang akan mengambil semua 14 soal)
+        selectedQuestions = shuffleArray([...quizData]).slice(0, 20); // slice(0, 20) akan otomatis mengambil semua 14 soal
+        userAnswers = new Array(selectedQuestions.length).fill(null); // <-- Inisialisasi array jawaban
+        
+        // Masuk fullscreen
+        openFullscreen(); // Mencoba masuk mode layar penuh
+        
+        // Tampilkan modal kuis
+        quizModal.classList.remove('hidden');
+        
+        // Muat soal pertama
+        loadQuestion();
+    }
+
+    // 5. Muat Soal
+    function loadQuestion() {
+        // Reset pilihan
+        selectedOption = userAnswers[currentQuestionIndex]; // <-- Muat jawaban yang tersimpan
+        
+        // Pastikan jumlah soal adalah 20 (atau jumlah soal yang ada jika kurang dari 20)
+        const totalQuestions = selectedQuestions.length; 
+        
+        const question = selectedQuestions[currentQuestionIndex];
+        
+        questionCounter.innerText = `Soal ${currentQuestionIndex + 1} dari ${totalQuestions}`; // <-- Gunakan totalQuestions
+        questionText.innerText = question.question;
+        
+        optionsContainer.innerHTML = ""; // Kosongkan opsi sebelumnya
+        
+        question.options.forEach((option, index) => {
+            const optionElement = document.createElement('div');
+            optionElement.classList.add('quiz-option', 'p-4', 'border-2', 'border-gray-300', 'rounded-lg', 'cursor-pointer', 'text-gray-800');
+            optionElement.innerHTML = `${option}`; // <-- Menghapus duplikasi huruf
+            
+            optionElement.addEventListener('click', () => selectAnswer(optionElement, index));
+            
+            // Tampilkan jawaban yang sudah dipilih sebelumnya
+            if (index === selectedOption) {
+                optionElement.classList.add('selected', 'bg-amber-100', 'border-amber-500');
+            }
+            
+            optionsContainer.appendChild(optionElement);
+        });
+
+        // Update tombol
+        if (currentQuestionIndex === totalQuestions - 1) { // <-- Gunakan totalQuestions
+            nextQuestionBtn.innerText = "Selesai";
+        } else {
+            nextQuestionBtn.innerText = "Selanjutnya";
+        }
+        
+        // Tampilkan/sembunyikan tombol "Sebelumnya"
+        if (currentQuestionIndex === 0) {
+            prevQuestionBtn.classList.add('hidden');
+        } else {
+            prevQuestionBtn.classList.remove('hidden');
+        }
+    }
+
+    // 6. Pilih Jawaban
+    function selectAnswer(optionElement, index) {
+        // Hapus kelas 'selected' dari semua opsi
+        Array.from(optionsContainer.children).forEach(child => {
+            child.classList.remove('selected', 'bg-amber-100', 'border-amber-500');
+        });
+        
+        // Tambahkan kelas 'selected' ke yang diklik
+        optionElement.classList.add('selected', 'bg-amber-100', 'border-amber-500');
+        
+        // Simpan jawaban
+        selectedOption = index;
+        userAnswers[currentQuestionIndex] = index; // <-- Simpan jawaban ke array
+    }
+
+    // 7. Tombol Soal Selanjutnya
+    nextQuestionBtn.addEventListener('click', () => {
+        // Pindah ke soal berikutnya
+        if (currentQuestionIndex < selectedQuestions.length - 1) {
+            currentQuestionIndex++;
+            loadQuestion();
+        } else {
+            // Kuis selesai
+            showResults();
+        }
+    });
+    
+    // 7b. Tombol Soal Sebelumnya (BARU)
+    prevQuestionBtn.addEventListener('click', () => {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            loadQuestion();
+        }
+    });
+
+    // 8. Tampilkan Hasil
+    function showResults() {
+        // Keluar dari fullscreen
+        closeFullscreen(); // Mencoba keluar dari mode layar penuh
+        
+        // Sembunyikan modal kuis
+        quizModal.classList.add('hidden');
+        
+        // Hitung skor dari array jawaban
+        score = 0;
+        for (let i = 0; i < selectedQuestions.length; i++) {
+            if (userAnswers[i] === selectedQuestions[i].correct) {
+                score++;
+            }
+        }
+        
+        // Hitung skor akhir
+        const finalScore = Math.round((score / selectedQuestions.length) * 100);
+        
+        // Tampilkan data di modal hasil
+        resultName.innerText = userName;
+        resultClass.innerText = `Kelas: ${userClass}`;
+        resultScore.innerText = finalScore;
+        
+        // Tampilkan modal hasil
+        resultModal.classList.remove('hidden');
+    }
+
+    // --- FUNGSI TOMBOL HASIL ---
+
+    // 9. Unduh Hasil
+    downloadBtn.addEventListener('click', () => {
+        html2canvas(resultCard, { 
+            scale: 2, // Meningkatkan resolusi
+            useCORS: true 
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = `hasil_kuis_${userName.replace(/\s/g, '_')}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    });
+
+    // 10. Kirim Hasil ke WhatsApp
+    waBtn.addEventListener('click', () => {
+        const finalScore = resultScore.innerText;
+        // Nomor WA ini tetap sama seperti file asli, bisa diganti jika perlu
+        const phoneNumber = "6285888892326"; 
+        
+        // Format pesan
+        const message = `Halo, saya telah menyelesaikan Kuis Tiga Pilar Ukhuwah.
+Nama: ${userName}
+Kelas: ${userClass}
+Skor: ${finalScore}`;
+        
+        // Buat URL WhatsApp
+        const waUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        
+        // Buka WhatsApp di tab baru
+        window.open(waUrl, '_blank');
+    });
+
+    // --- FUNGSI DETEKSI KELUAR FULLSCREEN ---
+    function handleFullscreenChange() {
+        const isFullscreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+        const isQuizActive = !quizModal.classList.contains('hidden');
+        const isResultVisible = !resultModal.classList.contains('hidden');
+
+        if (!isFullscreen && isQuizActive && !isResultVisible) {
+            
+            // Tambahkan notifikasi di kartu hasil
+            const notification = document.createElement('p');
+            notification.id = "forceExitNotification"; // ID untuk hapus di sesi berikutnya
+            notification.className = "text-red-600 font-bold mb-4 text-lg";
+            notification.innerText = "Sesi dihentikan karena keluar dari layar penuh.";
+            
+            if (!document.getElementById('forceExitNotification')) {
+                resultCard.prepend(notification);
+            }
+
+            // Langsung hentikan kuis dan tampilkan hasil
+            showResults(); 
+        }
+    }
+
+    // Daftarkan event listener untuk memantau perubahan fullscreen
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('msfullscreenchange', handleFullscreenChange);
+
+    // --- FUNGSI MODAL RINCIAN LINIMASA (BARU) ---
+
+    // Tampilkan modal saat kartu linimasa diklik
+    timelineWrapper.addEventListener('click', (e) => {
+        // Cari elemen '.timeline-card' terdekat dari elemen yang diklik
+        const card = e.target.closest('.timeline-card');
+        
+        if (!card) {
+            return; // Keluar jika yang diklik bukan bagian dari kartu
+        }
+
+        const target = card.dataset.target; // Ambil 'data-target' (cth: "prolog", "babak1")
+
+        if (target && timelineDetails[target]) {
+            const data = timelineDetails[target];
+            
+            // Isi konten modal
+            detailsTitle.innerText = data.title;
+            detailsContent.innerHTML = data.content;
+            
+            // Tampilkan modal
+            detailsModal.classList.remove('hidden');
+        }
+    });
+
+    // Fungsi untuk menutup modal rincian
+    function closeDetailsModal() {
+        detailsModal.classList.add('hidden');
+    }
+
+    // Tutup modal saat tombol 'x' diklik
+    closeDetailsBtn.addEventListener('click', closeDetailsModal);
+
+    // Tutup modal saat area di luar modal (latar belakang) diklik
+    detailsModal.addEventListener('click', (e) => {
+        if (e.target === detailsModal) {
+            closeDetailsModal();
+        }
+    });
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
