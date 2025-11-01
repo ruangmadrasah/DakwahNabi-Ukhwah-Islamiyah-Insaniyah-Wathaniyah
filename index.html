@@ -1005,6 +1005,22 @@ Skor: ${finalScore}`;
     document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
     document.addEventListener('msfullscreenchange', handleFullscreenChange);
 
+    // --- FUNGSI DETEKSI TUTUP TAB/REFRESH (BARU) ---
+    window.addEventListener('beforeunload', (e) => {
+        const isQuizActive = !quizModal.classList.contains('hidden');
+        const isResultVisible = !resultModal.classList.contains('hidden');
+
+        // Hanya tampilkan konfirmasi jika kuis aktif dan hasil belum muncul
+        if (isQuizActive && !isResultVisible) {
+            // Standar untuk memicu prompt konfirmasi bawaan browser
+            e.preventDefault(); // Diperlukan oleh beberapa browser
+            e.returnValue = ''; // Diperlukan oleh Chrome/Safari
+            return '';          // Diperlukan oleh Firefox lama
+        }
+        // Jika kuis tidak aktif (misal di halaman utama atau hasil),
+        // biarkan pengguna pergi tanpa prompt.
+    });
+
     // --- FUNGSI MODAL RINCIAN LINIMASA (BARU) ---
 
     // Tampilkan modal saat kartu linimasa diklik
@@ -1049,3 +1065,4 @@ Skor: ${finalScore}`;
 
 </body>
 </html>
+
