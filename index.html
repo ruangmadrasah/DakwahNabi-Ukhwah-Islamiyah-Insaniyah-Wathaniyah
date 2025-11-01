@@ -238,12 +238,29 @@
             </div>
             <!-- Konten Scrollable -->
             <div id="detailsContent" class="prose max-w-none overflow-y-auto text-gray-700">
-                <!-- Konten rincian akan dimuat di sini oleh JavaScript -->
-            </div>
+            <!-- Konten rincian akan dimuat di sini oleh JavaScript -->
         </div>
     </div>
+</div>
 
-    <script>
+<!-- Modal: Konfirmasi Keluar Kuis (BARU) -->
+<div id="exitConfirmModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+    <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md text-center">
+        <h2 class="text-2xl font-bold mb-4 text-red-600">Peringatan!</h2>
+        <p class="text-lg text-gray-700 mb-6">Anda keluar dari mode layar penuh. Sesi kuis akan dihentikan jika Anda melanjutkan. Yakin ingin keluar?</p>
+        <p class="text-sm text-gray-500 mb-6">Pilih "Kembali" dan segera masuk lagi ke mode layar penuh (F11 atau tombol di browser) untuk melanjutkan kuis.</p>
+        <div class="flex justify-between gap-4">
+            <button id="cancelExitBtn" class="w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg">
+                Kembali
+            </button>
+            <button id="confirmExitBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg">
+                Ya, Keluar
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
     // --- BANK DATA RINCIAN LINIMASA (BARU) ---
     const timelineDetails = {
         // 'prolog' DIHAPUS
@@ -727,6 +744,12 @@
     const detailsContent = document.getElementById('detailsContent');
     const closeDetailsBtn = document.getElementById('closeDetailsBtn');
 
+    // --- ELEMEN DOM (BARU) ---
+    const exitConfirmModal = document.getElementById('exitConfirmModal');
+    const confirmExitBtn = document.getElementById('confirmExitBtn');
+    const cancelExitBtn = document.getElementById('cancelExitBtn');
+
+
     // --- FUNGSI FULLSCREEN ---
     const elem = document.documentElement;
     function openFullscreen() {
@@ -976,26 +999,57 @@ Skor: ${finalScore}`;
         window.open(waUrl, '_blank');
     });
 
-    // --- FUNGSI DETEKSI KELUAR FULLSCREEN ---
+    // --- FUNGSI KONFIRMASI KELUAR FULLSCREEN (BARU) ---
+
+    // 11. Tombol "Ya, Keluar"
+    confirmExitBtn.addEventListener('click', () => {
+        // Sembunyikan modal konfirmasi
+        exitConfirmModal.classList.add('hidden');
+
+        // Tambahkan notifikasi di kartu hasil
+        const notification = document.createElement('p');
+        notification.id = "forceExitNotification"; // ID untuk hapus di sesi berikutnya
+        notification.className = "text-red-600 font-bold mb-4 text-lg";
+        notification.innerText = "Sesi dihentikan karena keluar dari layar penuh.";
+        
+        // Cek agar tidak duplikat
+        if (!document.getElementById('forceExitNotification')) {
+            resultCard.prepend(notification);
+        }
+
+        // Hentikan kuis dan tampilkan hasil
+        showResults();
+    });
+
+    // 12. Tombol "Kembali" (Batal Keluar)
+    cancelExitBtn.addEventListener('click', () => {
+        // Sembunyikan modal konfirmasi
+        exitConfirmModal.classList.add('hidden');
+        
+        // Tampilkan lagi modal kuisnya
+        quizModal.classList.remove('hidden');
+        // Dan coba masuk lagi ke mode fullscreen
+        openFullscreen();
+    });
+
+
+    // --- FUNGSI DETEKSI KELUAR FULLSCREEN (DIPERBARUI) ---
     function handleFullscreenChange() {
         const isFullscreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
         const isQuizActive = !quizModal.classList.contains('hidden');
         const isResultVisible = !resultModal.classList.contains('hidden');
 
+        // Jika:
+        // 1. Tidak lagi dalam mode fullscreen (isFullscreen bernilai null)
+        // 2. Kuis sedang aktif (modal kuis terlihat)
+        // 3. Modal hasil BELUM terlihat (mencegah trigger ganda saat kuis selesai normal)
         if (!isFullscreen && isQuizActive && !isResultVisible) {
             
-            // Tambahkan notifikasi di kartu hasil
-            const notification = document.createElement('p');
-            notification.id = "forceExitNotification"; // ID untuk hapus di sesi berikutnya
-            notification.className = "text-red-600 font-bold mb-4 text-lg";
-            notification.innerText = "Sesi dihentikan karena keluar dari layar penuh.";
-            
-            if (!document.getElementById('forceExitNotification')) {
-                resultCard.prepend(notification);
-            }
+            // Tampilkan modal konfirmasi.
+            exitConfirmModal.classList.remove('hidden');
 
-            // Langsung hentikan kuis dan tampilkan hasil
-            showResults(); 
+            // Sembunyikan juga kuisnya, agar tidak bisa dilanjutkan di background.
+            quizModal.classList.add('hidden');
         }
     }
 
@@ -1065,4 +1119,3 @@ Skor: ${finalScore}`;
 
 </body>
 </html>
-
