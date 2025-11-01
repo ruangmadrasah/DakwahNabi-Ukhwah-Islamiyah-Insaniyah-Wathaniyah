@@ -156,6 +156,10 @@
                     <label for="userClass" class="block text-sm font-medium text-gray-700 mb-1">Kelas/Instansi:</label>
                     <input type="text" id="userClass" name="userClass" class="w-full p-3 border border-gray-300 rounded-lg" required>
                 </div>
+                
+                <!-- Placeholder Error BARU untuk split screen / validasi -->
+                <p id="formError" class="text-red-600 text-sm font-semibold mb-4 text-center hidden"></p>
+
                 <button id="submitInfoBtn" type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
                     Mulai Kuis
                 </button>
@@ -766,20 +770,42 @@
     // 2. Tampilkan Modal Info
     startQuizBtn.addEventListener('click', () => {
         userInfoModal.classList.remove('hidden');
+        // Sembunyikan pesan error lama saat modal dibuka
+        document.getElementById('formError').classList.add('hidden');
     });
 
-    // 3. Submit Info & Mulai Kuis
+    // 3. Submit Info & Mulai Kuis (LOGIKA DIPERBARUI)
     userInfoForm.addEventListener('submit', (e) => {
         e.preventDefault();
         userName = document.getElementById('userName').value;
         userClass = document.getElementById('userClass').value;
         
-        // PERBAIKAN: Tambahkan pemeriksaan validasi input
+        const errorEl = document.getElementById('formError'); // Ambil elemen error
+
+        // Cek validasi input
         if (userName.trim() && userClass.trim()) {
-            userInfoModal.classList.add('hidden');
-            startQuiz(); // Panggil fungsi startQuiz
+            
+            // Cek split screen/window tidak maksimal
+            // Toleransi (misal 85%) untuk taskbar dll.
+            const widthTolerance = screen.width * 0.85;
+            const heightTolerance = screen.height * 0.85;
+
+            if (window.innerWidth < widthTolerance || window.innerHeight < heightTolerance) {
+                // Tampilkan pesan error split screen
+                errorEl.innerText = "Kuis ditolak. Harap maksimalkan (maximize) jendela browser Anda dan jangan gunakan mode split screen.";
+                errorEl.classList.remove('hidden');
+            } else {
+                // Lanjutkan jika semua OK
+                errorEl.classList.add('hidden'); // Sembunyikan error
+                userInfoModal.classList.add('hidden');
+                startQuiz(); // Panggil fungsi startQuiz
+            }
+        } else {
+            // Tampilkan error validasi
+            errorEl.innerText = "Nama dan Kelas/Instansi wajib diisi.";
+            errorEl.classList.remove('hidden');
         }
-    }); // <-- PERBAIKAN: Menambahkan ); untuk menutup addEventListener
+    });
 
     // 4. Logika Memulai Kuis (DIPISAHKAN KEMBALI)
     function startQuiz() {
